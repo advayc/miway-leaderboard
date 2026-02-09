@@ -99,10 +99,29 @@ function pickSpeedMps(reportedMps?: number, computed?: { speedMps?: number; reli
     return undefined;
 }
 
+function bearingToLetter(bearing: number): 'N' | 'E' | 'S' | 'W' {
+    const deg = ((bearing % 360) + 360) % 360;
+    if (deg >= 45 && deg < 135) return 'E';
+    if (deg >= 135 && deg < 225) return 'S';
+    if (deg >= 225 && deg < 315) return 'W';
+    return 'N';
+}
+
+function bearingToLabel(letter: string): string {
+    switch (letter) {
+        case 'N': return 'Northbound';
+        case 'S': return 'Southbound';
+        case 'E': return 'Eastbound';
+        case 'W': return 'Westbound';
+        default: return 'Unknown';
+    }
+}
+
 function formatRouteVariant(
     routeId: string,
     routeShortName: string,
-    directionId?: number | null
+    directionId?: number | null,
+    bearing?: number | null
 ): { variantKey: string; routeNumber: string; directionLabel?: string } {
     if (directionId === 0) {
         return { variantKey: `${routeId}:N`, routeNumber: `${routeShortName}N`, directionLabel: 'Northbound' };
@@ -110,6 +129,12 @@ function formatRouteVariant(
     if (directionId === 1) {
         return { variantKey: `${routeId}:S`, routeNumber: `${routeShortName}S`, directionLabel: 'Southbound' };
     }
+
+    if (typeof bearing === 'number' && Number.isFinite(bearing)) {
+        const letter = bearingToLetter(bearing);
+        return { variantKey: `${routeId}:${letter}`, routeNumber: `${routeShortName}${letter}`, directionLabel: bearingToLabel(letter) };
+    }
+
     return { variantKey: `${routeId}:U`, routeNumber: routeShortName };
 }
 
@@ -253,7 +278,7 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
         const speedKmH = resolvedSpeedMps * 3.6;
 
         const routeNames = routeMap[routeId];
-        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId);
+        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, position.bearing ?? null);
 
         if (!routeSpeeds[variant.variantKey]) {
             routeSpeeds[variant.variantKey] = [];
@@ -355,7 +380,7 @@ export async function getVehiclePositions(): Promise<MiwayVehicleResponse> {
             continue;
         }
         const routeNames = routeMap[routeId];
-        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId);
+        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, position.bearing ?? null);
         const status = speedKmh >= 2 ? 'moving' : 'stopped';
 
         if (status === 'moving') {
