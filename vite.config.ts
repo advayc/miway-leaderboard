@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { getMiwayLeaderboard } from './api/miwayService'
+import { getMiwayLeaderboard, getTripUpdatesSummary, getAlertsSummary, getVehiclePositions } from './lib/miwayService'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -21,17 +21,42 @@ export default defineConfig({
           }
         });
 
-        server.middlewares.use('/api/ttc', async (_req, res) => {
+        server.middlewares.use('/api/miway-trip-updates', async (_req, res) => {
           try {
-            const leaderboard = await getMiwayLeaderboard();
+            const summary = await getTripUpdatesSummary();
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify(leaderboard));
+            res.end(JSON.stringify(summary));
           } catch (error) {
             res.statusCode = 500;
             res.setHeader('Content-Type', 'application/json');
-            res.end(JSON.stringify({ error: 'Failed to fetch MiWay data' }));
+            res.end(JSON.stringify({ error: 'Failed to fetch MiWay trip updates' }));
           }
         });
+
+        server.middlewares.use('/api/miway-alerts', async (_req, res) => {
+          try {
+            const summary = await getAlertsSummary();
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(summary));
+          } catch (error) {
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ error: 'Failed to fetch MiWay alerts' }));
+          }
+        });
+
+        server.middlewares.use('/api/miway-vehicles', async (_req, res) => {
+          try {
+            const payload = await getVehiclePositions();
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(payload));
+          } catch (error) {
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ error: 'Failed to fetch MiWay vehicle positions' }));
+          }
+        });
+
       },
     },
   ],

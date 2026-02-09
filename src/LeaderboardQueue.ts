@@ -2,6 +2,7 @@ export interface LeaderboardData {
     routeNumber: string;
     routeName: string;
     speed: number;
+    speedMps?: number;
 }
 
 export class LeaderboardQueue {
@@ -22,6 +23,7 @@ export class LeaderboardQueue {
             if (existingIndex !== -1) {
                 // Update existing item's speed
                 this.items[existingIndex].speed = item.speed;
+                this.items[existingIndex].speedMps = item.speedMps;
                 this.items[existingIndex].routeName = item.routeName;
             } else {
                 // Append new item

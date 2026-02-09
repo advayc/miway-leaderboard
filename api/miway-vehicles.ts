@@ -1,16 +1,14 @@
 import type { VercelRequest, VercelResponse } from '@vercel/node';
-import { getMiwayLeaderboard } from '../lib/miwayService.js';
+import { getVehiclePositions } from '../lib/miwayService.js';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
     try {
-        const leaderboard = await getMiwayLeaderboard();
-
+        const payload = await getVehiclePositions();
         res.setHeader('Access-Control-Allow-Origin', '*');
         res.setHeader('Content-Type', 'application/json');
-
-        return res.status(200).json(leaderboard);
+        return res.status(200).json(payload);
     } catch (error) {
-        console.error('Error fetching MiWay data:', error);
+        console.error('Error fetching MiWay vehicle positions:', error);
         return res.status(500).json({ error: 'Internal server error' });
     }
 }

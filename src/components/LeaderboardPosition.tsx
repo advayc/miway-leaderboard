@@ -5,10 +5,12 @@ interface LeaderboardPosition {
     routeNumber: string;
     routeName: string;
     speed: number;
+    speedMps?: number;
 }
 
-function LeaderboardPosition({ routeNumber, routeName, speed }: LeaderboardPosition) {
+function LeaderboardPosition({ routeNumber, routeName, speed, speedMps }: LeaderboardPosition) {
     const containerRef = useRef<HTMLDivElement>(null);
+    const [isHovering, setIsHovering] = useState(false);
 
     const [isMobile, setIsMobile] = useState(window.innerWidth < 500);
     useEffect(() => {
@@ -29,7 +31,12 @@ function LeaderboardPosition({ routeNumber, routeName, speed }: LeaderboardPosit
     // 50, 36
 
     return (
-        <div className="leaderboard-position" ref={containerRef}>
+        <div
+            className="leaderboard-position"
+            ref={containerRef}
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+        >
             <div className="border">
                 {border}
             </div>
@@ -41,6 +48,9 @@ function LeaderboardPosition({ routeNumber, routeName, speed }: LeaderboardPosit
                     <div className="position-route-name">{routeName}</div>
                 </div>
                 <div className="right-side">
+                    {isHovering && speedMps !== undefined && (
+                        <div className="position-speed-ms">{speedMps.toFixed(2)} m/s</div>
+                    )}
                     <div className="position-speed">{speed.toFixed(1)} km/h</div>
                     &nbsp;|
                 </div>

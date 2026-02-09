@@ -21,8 +21,15 @@
 .right-side {
     display: flex;
     justify-content: right;
+    align-items: center;
+    gap: 0.6rem;
 }
 
 .position-route-number {
     color: #f05a28;
+}
+
+.position-speed-ms {
+    color: #9ca3af;
+    font-size: 0.85rem;
 }

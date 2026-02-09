@@ -69,4 +69,4 @@ miway-leaderboard/
 
 **advayc** — [advay.ca](https://advay.ca/)
 
-Forked from the original TTC Streetcar Leaderboard by Luka Jovanovic.
+This project is a fork of th original MiWay leaderboard 

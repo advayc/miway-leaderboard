@@ -1,11 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import LeaderboardPosition from './components/LeaderboardPosition'
 import { LeaderboardQueue, type LeaderboardData } from './LeaderboardQueue'
 import { Analytics } from '@vercel/analytics/react'
+import DataPage from './DataPage'
 
 function App() {
+  const [isImageOpen, setIsImageOpen] = useState(false);
   const [leaderboardData, setLeaderboardData] = useState<LeaderboardData[]>([]);
   const leaderboardDataRef = useRef<LeaderboardData[]>([]);
   const leaderboardQueue = useRef(new LeaderboardQueue());
@@ -21,7 +24,8 @@ function App() {
       const newData: LeaderboardData[] = data.map((route: LeaderboardData) => ({
         routeNumber: route.routeNumber,
         routeName: route.routeName,
-        speed: route.speed
+        speed: route.speed,
+        speedMps: route.speedMps
       }));
 
       // Filter to find elements that are different from current leaderboard
@@ -29,8 +33,7 @@ function App() {
         const existingItem = leaderboardDataRef.current.find(
           (item) => item.routeNumber === newItem.routeNumber
         );
-        // Include if: doesn't exist in current data OR speed changed
-        return !existingItem || existingItem.speed !== newItem.speed;
+        return !existingItem || existingItem.speed !== newItem.speed || existingItem.speedMps !== newItem.speedMps;
       });
 
       // Add changed items to the queue
@@ -93,61 +96,111 @@ function App() {
     }
   }, []);
 
-  return (
-    <>
-      <div className="wrapper">
-        <div className="title">
-          MIWAY LIVE LEADERBOARD
-        </div>
-        <div className="image-container">
-          <img id="streetcar-image" src="https://thepointer.com/photos/headers/nearly-60-of-mississauga-s-bus-fleet-to-be-hybrid-electric-by-end-of-next-year-the-pointer-5043eff9.jpg" alt="MiWay bus" />
-        </div>
-        <div className="information">
-          MiWay publishes real-time vehicle updates across Mississauga.
-          <br></br>
-          This site ranks average route speeds using the live GTFS-RT feed.
-        </div>
-        <div className="leaderboard">
-          <AnimatePresence>
-            {leaderboardData.length == 0 ? (
-              <div className="loading">
+  useEffect(() => {
+    if (!isImageOpen) return;
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setIsImageOpen(false);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isImageOpen]);
+
+  const LeaderboardPage = () => (
+    <div className="wrapper">
+      <div className="title">
+        MIWAY LIVE LEADERBOARD
+      </div>
+      <div className="image-container">
+        <img
+          id="streetcar-image"
+          className="zoomable-image"
+          src="https://thepointer.com/photos/headers/nearly-60-of-mississauga-s-bus-fleet-to-be-hybrid-electric-by-end-of-next-year-the-pointer-5043eff9.jpg"
+          alt="MiWay bus"
+          onClick={() => setIsImageOpen(true)}
+        />
+      </div>
+      <div className="information">
+        MiWay publishes real-time vehicle updates across Mississauga.
+        <br></br>
+        This site ranks average route speeds using the live GTFS-RT feed.
+      </div>
+      <div className="leaderboard">
+        <AnimatePresence>
+          {leaderboardData.length == 0 ? (
+            <div className="loading">
               Loading
               <span className="loading-dots">
                 <span>.</span><span>.</span><span>.</span>
               </span>
             </div>
-            ) : (
-              leaderboardData.map((position) => (
+          ) : (
+            leaderboardData.map((position) => (
                 <motion.div
                   key={position.routeNumber}
                   layout
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+                 transition={{
+                   // slower, smoother enter + layout animation
+                   layout: { duration: 0.8, ease: [0.2, 0.8, 0.2, 1] },
+                   opacity: { duration: 0.45, ease: 'easeOut' },
+                   y: { type: 'spring', stiffness: 200, damping: 25 }
+                 }}
                 >
-                  <LeaderboardPosition
-                    routeNumber={position.routeNumber}
-                    routeName={position.routeName}
-                    speed={position.speed}
-                  />
-                </motion.div>
-              ))
-            )}
-          </AnimatePresence>
-        </div>
-        <div className="info">
-          This leaderboard is live and shows the average speed<br></br>of all MiWay vehicles on a route with a short delay.
-        </div>
-        <div className="footer">
-          <i>
-            Created by <a href="https://advay.ca/" target="_blank" rel="noreferrer">advay chandorkar</a>.&nbsp;
-            this project is a fork of the original <a href="https://github.com/lukajvnic/ttc-leaderboard" target="_blank" rel="noreferrer">TTC leaderboard</a>.
-          </i>
-        </div>
+                <LeaderboardPosition
+                  routeNumber={position.routeNumber}
+                  routeName={position.routeName}
+                  speed={position.speed}
+                  speedMps={position.speedMps}
+                />
+              </motion.div>
+            ))
+          )}
+        </AnimatePresence>
       </div>
+      <div className="info">
+        This leaderboard is live and shows the average speed<br></br>of all MiWay vehicles on a route with a short delay.
+      </div>
+      <div className="footer">
+        <i>
+          Created by <a href="https://advay.ca/" target="_blank" rel="noreferrer">advay chandorkar</a>.&nbsp;
+          Built with MiWay real-time feeds. 
+          
+          View on <a href="https://github.com/advayc/miway-leaderboard" target="_blank" rel="noreferrer">GitHub</a>.
+          <br />
+          Credit to the original project: <a href="https://github.com/lukajvnic/ttc-leaderboard" target="_blank" rel="noreferrer">TTC Leaderboard</a>.
+        </i>
+      </div>
+    </div>
+  );
 
+  return (
+    <BrowserRouter>
+      <nav className="nav">
+        <Link to="/">Leaderboard</Link>
+        <Link to="/feeds">Feed Status</Link>
+      </nav>
+      <Routes>
+        <Route path="/" element={<LeaderboardPage />} />
+        <Route path="/feeds" element={<DataPage />} />
+      </Routes>
+      {isImageOpen && (
+        <div className="image-modal" onClick={() => setIsImageOpen(false)}>
+          <div className="image-modal-content" onClick={(event) => event.stopPropagation()}>
+            <button className="image-modal-close" onClick={() => setIsImageOpen(false)} aria-label="Close image">
+              ×
+            </button>
+            <img
+              src="https://thepointer.com/photos/headers/nearly-60-of-mississauga-s-bus-fleet-to-be-hybrid-electric-by-end-of-next-year-the-pointer-5043eff9.jpg"
+              alt="MiWay bus enlarged"
+            />
+          </div>
+        </div>
+      )}
       <Analytics />
-    </>
+    </BrowserRouter>
   )
 }
 
