@@ -24,9 +24,5 @@
 }
 
 .position-route-number {
-    color: red;
-}
-
-.position-route-number.blue {
-    color: #4a9eff;
+    color: #f05a28;
 }

@@ -1,12 +1,6 @@
-# TTC Streetcar Leaderboard
+# MiWay Live Leaderboard
 
-Recently, Toronto opened Line 6, the first new rapid transit line in the city in over 20 years. The route was advertised with a ~30 minute end-to-end journey time, but on opening day, it took nearly an hour.
-
-This issue with speed is not endemic to the LRT, and has been known about for years, especially with the city's streetcar network. 
-
-This website is intended to be a social commentary on the state of the TTC's streetcar network, in an attempt to raise awareness and hopefully spur some action.
-
-Many people blame the lack of TSP (transit signal priority), but there are many other factors that contribute to slow streetcars, including stop spacing, arbitrary speed limits, and mixed traffic.
+This website shows live average route speeds for MiWay vehicles in Mississauga using GTFS-RT data.
 
 ## 🛠️ Tech Stack
 
@@ -16,7 +10,7 @@ Many people blame the lack of TSP (transit signal priority), but there are many 
 | Animations | Framer Motion |
 | Build Tool | Vite |
 | Backend | Vercel Serverless Functions |
-| Data Source | TTC NextBus XML Feed |
+| Data Source | MiWay GTFS-RT Feed |
 | Analytics | Vercel Analytics |
 
 ## 🚀 Getting Started
@@ -29,8 +23,8 @@ Many people blame the lack of TSP (transit signal priority), but there are many 
 
 ```bash
 # Clone the repository
-git clone https://github.com/lukajvnic/ttc-leaderboard.git
-cd ttc-leaderboard
+git clone https://github.com/advayc/miway-leaderboard.git
+cd miway-leaderboard
 
 # Install dependencies
 npm install
@@ -49,8 +43,8 @@ npm run build
 
 ## 📊 How It Works
 
-1. **Data Fetching** — The serverless API (`/api/ttc`) fetches the TTC's live vehicle location feed
-2. **Speed Calculation** — Calculates average speed for each route based on all active streetcars
+1. **Data Fetching** — The serverless API (`/api/miway`) fetches MiWay's live vehicle positions
+2. **Speed Calculation** — Calculates average speed for each route based on active vehicles
 3. **Change Detection** — Only routes with updated speeds are added to the update queue
 4. **Queue Processing** — Updates are processed one at a time; if a position change occurs, the UI waits 1 second for the animation, otherwise it moves to the next update immediately
 5. **Ranking** — Routes are sorted by speed, fastest at the top
@@ -58,9 +52,9 @@ npm run build
 ## 🗂️ Project Structure
 
 ```
-ttcleaderboard/
+miway-leaderboard/
 ├── api/
-│   └── ttc.ts              # Vercel serverless function for TTC data
+│   └── miway.ts            # Vercel serverless function for MiWay data
 ├── src/
 │   ├── components/
 │   │   └── LeaderboardPosition.tsx  # Individual route row component
@@ -73,4 +67,6 @@ ttcleaderboard/
 
 ## 👤 Author
 
-**Luka Jovanovic** — [lukajvnic.com](https://lukajvnic.com)
+**advayc** — [advay.ca](https://advay.ca/)
+
+Forked from the original TTC Streetcar Leaderboard by Luka Jovanovic.

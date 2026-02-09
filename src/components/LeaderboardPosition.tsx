@@ -36,7 +36,7 @@ function LeaderboardPosition({ routeNumber, routeName, speed }: LeaderboardPosit
             <div className="content" style={{ width: `${borderWidth}ch` }}>
                 <div className="left-side">
                     |&nbsp;
-                    <div className={`position-route-number ${routeNumber.startsWith('3') ? 'blue' : ''}`}>{routeNumber}</div>
+                    <div className="position-route-number">{routeNumber}</div>
                     &nbsp;-&nbsp;
                     <div className="position-route-name">{routeName}</div>
                 </div>

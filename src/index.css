@@ -1,0 +1,18 @@
+
+body {
+	margin: 0;
+	font-family: 'Monospace', monospace;
+	background: #fff7f2;
+	color: #1f1f1f;
+}
+
+a {
+	color: #d9481b;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #f05a28;
+	text-decoration: underline dotted;
+	text-underline-offset: 3px;
+}

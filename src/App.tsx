@@ -9,37 +9,19 @@ function App() {
   const [leaderboardData, setLeaderboardData] = useState<LeaderboardData[]>([]);
   const leaderboardDataRef = useRef<LeaderboardData[]>([]);
   const leaderboardQueue = useRef(new LeaderboardQueue());
-  const route_map: Record<string, string> = {
-    "501": "Queen",
-    "503": "Kingston",
-    "504": "King",
-    "505": "Dundas",
-    "506": "Carlton",
-    "507": "Long Branch",
-    "508": "Lake Shore",
-    "509": "Harbourfront",
-    "510": "Spadina",
-    "511": "Bathurst",
-    "512": "St. Clair",
-    "301": "Queen",
-    "304": "King",
-    "305": "Dundas",
-    "306": "Carleton",
-    "310": "Spadina",
-    "312": "St. Clair"
-  };
 
   const fetchLeaderboard = async () => {
     try {
-      const response = await fetch('/api/ttc');
+      const response = await fetch('/api/miway');
       const data = await response.json();
 
       if (response.status !== 200)
         throw new Error(`Failed to fetch: ${response.status}`);
 
-      const newData: LeaderboardData[] = data.map((route: [string, number]) => ({
-        routeNumber: route[0],
-        speed: route[1]
+      const newData: LeaderboardData[] = data.map((route: LeaderboardData) => ({
+        routeNumber: route.routeNumber,
+        routeName: route.routeName,
+        speed: route.speed
       }));
 
       // Filter to find elements that are different from current leaderboard
@@ -115,15 +97,15 @@ function App() {
     <>
       <div className="wrapper">
         <div className="title">
-          TTC STREETCARS LIVE LEADERBOARD
+          MIWAY LIVE LEADERBOARD
         </div>
         <div className="image-container">
-          <img id="streetcar-image" src="https://live.staticflickr.com/7791/17390893711_bf1b2131ad_h.jpg" alt="streetcar pulled by horse" />
+          <img id="streetcar-image" src="https://thepointer.com/photos/headers/nearly-60-of-mississauga-s-bus-fleet-to-be-hybrid-electric-by-end-of-next-year-the-pointer-5043eff9.jpg" alt="MiWay bus" />
         </div>
         <div className="information">
-          Recently the TTC has been under a lot of criticism for <a href="https://www.blogto.com/city/2024/08/toronto-ttc-streetcars-slowest-world/" target="_blank">slow service</a>.
+          MiWay publishes real-time vehicle updates across Mississauga.
           <br></br>
-          This site intends to show how slow it really is.
+          This site ranks average route speeds using the live GTFS-RT feed.
         </div>
         <div className="leaderboard">
           <AnimatePresence>
@@ -140,7 +122,7 @@ function App() {
                 >
                   <LeaderboardPosition
                     routeNumber={position.routeNumber}
-                    routeName={route_map[position.routeNumber]}
+                    routeName={position.routeName}
                     speed={position.speed}
                   />
                 </motion.div>
@@ -149,10 +131,13 @@ function App() {
           </AnimatePresence>
         </div>
         <div className="info">
-          This leaderboard is live and shows the average speed<br></br>of all streetcars on a route with ~30 second delay.
+          This leaderboard is live and shows the average speed<br></br>of all MiWay vehicles on a route with a short delay.
         </div>
         <div className="footer">
-          <i>By <a href="https://lukajvnic.com" target="_blank">Luka Jovanovic</a> & <a href="https://www.linkedin.com/in/matthew-li07/" target="_blank">Matthew Li</a> (<a href="https://github.com/lukajvnic/ttc-leaderboard" target="_blank">github</a>)</i>
+          <i>
+            Created by <a href="https://advay.ca/" target="_blank" rel="noreferrer">advay chandorkar</a>.&nbsp;
+            this project is a fork of the original <a href="https://github.com/lukajvnic/ttc-leaderboard" target="_blank" rel="noreferrer">TTC leaderboard</a>.
+          </i>
         </div>
       </div>
 
