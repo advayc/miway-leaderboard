@@ -111,7 +111,7 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
         const vehicle = entity.vehicle;
         if (!vehicle) continue;
 
-        const routeId = vehicle.trip?.route_id;
+        const routeId = vehicle.trip?.routeId ?? vehicle.trip?.routeId;
         const position = vehicle.position;
         const speedMetersPerSecond = position?.speed;
         const vehicleId = vehicle.vehicle?.id || entity.id;
@@ -151,7 +151,7 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
             continue;
         }
 
-        const speedKmH = resolvedSpeedMetersPerSecond * 3.6;
+        const speedKmH = (resolvedSpeedMetersPerSecond as number) * 3.6;
 
         if (!routeStats[routeId]) {
             routeStats[routeId] = { totalSpeed: 0, count: 0 };

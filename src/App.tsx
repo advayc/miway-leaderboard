@@ -110,7 +110,12 @@ function App() {
         <div className="leaderboard">
           <AnimatePresence>
             {leaderboardData.length == 0 ? (
-              <div className="loading">Loading...</div>
+              <div className="loading">
+              Loading
+              <span className="loading-dots">
+                <span>.</span><span>.</span><span>.</span>
+              </span>
+            </div>
             ) : (
               leaderboardData.map((position) => (
                 <motion.div
