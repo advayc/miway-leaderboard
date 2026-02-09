@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import './App.css'
 import LeaderboardPosition from './components/LeaderboardPosition'
@@ -12,6 +11,8 @@ function App() {
   const [leaderboardData, setLeaderboardData] = useState<LeaderboardData[]>([]);
   const leaderboardDataRef = useRef<LeaderboardData[]>([]);
   const leaderboardQueue = useRef(new LeaderboardQueue());
+  const itemRefs = useRef(new Map<string, HTMLDivElement>());
+  const prevPositionsRef = useRef<Map<string, DOMRect> | null>(null);
 
   const fetchLeaderboard = async () => {
     try {
@@ -58,6 +59,13 @@ function App() {
       if (nextItem) {
         // Compute what the new sorted data will be using the ref
         const prevData = leaderboardDataRef.current;
+        prevPositionsRef.current = new Map();
+        prevData.forEach((item) => {
+          const el = itemRefs.current.get(item.routeNumber);
+          if (el) {
+            prevPositionsRef.current?.set(item.routeNumber, el.getBoundingClientRect());
+          }
+        });
         const existingIndex = prevData.findIndex(item => item.routeNumber === nextItem.routeNumber);
         let newData: LeaderboardData[];
 
@@ -96,6 +104,37 @@ function App() {
     }
   }, []);
 
+  useLayoutEffect(() => {
+    const prevPositions = prevPositionsRef.current;
+    if (!prevPositions) return;
+
+    leaderboardData.forEach((item) => {
+      const el = itemRefs.current.get(item.routeNumber);
+      if (!el) return;
+      const nextRect = el.getBoundingClientRect();
+      const prevRect = prevPositions.get(item.routeNumber);
+
+      if (prevRect) {
+        const deltaY = prevRect.top - nextRect.top;
+        if (Math.abs(deltaY) > 0.5) {
+          el.style.transform = `translateY(${deltaY}px)`;
+          el.style.transition = 'transform 0s';
+          requestAnimationFrame(() => {
+            el.style.transition = 'transform 300ms cubic-bezier(0.2, 0.8, 0.2, 1)';
+            el.style.transform = 'translateY(0)';
+          });
+        }
+      } else {
+        el.classList.add('leaderboard-enter');
+        const onEnd = () => {
+          el.classList.remove('leaderboard-enter');
+          el.removeEventListener('animationend', onEnd);
+        };
+        el.addEventListener('animationend', onEnd);
+      }
+    });
+  }, [leaderboardData]);
+
   useEffect(() => {
     if (!isImageOpen) return;
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -126,8 +165,7 @@ function App() {
         <br></br>
         This site ranks average route speeds using the live GTFS-RT feed.
       </div>
-      <div className="leaderboard">
-        <AnimatePresence>
+        <div className="leaderboard">
           {leaderboardData.length == 0 ? (
             <div className="loading">
               Loading
@@ -137,29 +175,27 @@ function App() {
             </div>
           ) : (
             leaderboardData.map((position) => (
-                <motion.div
-                  key={position.routeNumber}
-                  layout
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                 transition={{
-                   // slower, smoother enter + layout animation
-                   layout: { duration: 0.8, ease: [0.2, 0.8, 0.2, 1] },
-                   opacity: { duration: 0.45, ease: 'easeOut' },
-                   y: { type: 'spring', stiffness: 200, damping: 25 }
-                 }}
-                >
+              <div
+                key={position.routeNumber}
+                className="leaderboard-item"
+                ref={(node) => {
+                  if (node) {
+                    itemRefs.current.set(position.routeNumber, node);
+                  } else {
+                    itemRefs.current.delete(position.routeNumber);
+                  }
+                }}
+              >
                 <LeaderboardPosition
                   routeNumber={position.routeNumber}
                   routeName={position.routeName}
                   speed={position.speed}
                   speedMps={position.speedMps}
                 />
-              </motion.div>
+              </div>
             ))
           )}
-        </AnimatePresence>
-      </div>
+        </div>
       <div className="info">
         This leaderboard is live and shows the average speed<br></br>of all MiWay vehicles on a route with a short delay.
       </div>

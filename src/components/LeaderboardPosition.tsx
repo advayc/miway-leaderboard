@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, memo } from 'react'
 import './LeaderboardPosition.css'
 
 interface LeaderboardPositionProps {
@@ -70,4 +70,4 @@ function LeaderboardPosition({ routeNumber, routeName, speed, speedMps, showMps 
     );
 }
 
-export default LeaderboardPosition;
+export default memo(LeaderboardPosition);
