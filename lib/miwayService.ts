@@ -103,28 +103,42 @@ function computeSpeedFromCache(
         const segBearing = calculateBearingDeg(a.lat, a.lon, b.lat, b.lon);
         bearings.push({ bearing: segBearing, weight: dist });
     }
+    // determine whether the computed speed should be considered reliable
+    const reliable = totalTime >= MIN_TIME_DELTA_SECONDS && totalTime <= MAX_TOTAL_TIME_SECONDS;
 
-    if (totalTime < MIN_TIME_DELTA_SECONDS || totalTime > MAX_TOTAL_TIME_SECONDS) {
-        return { reliable: false };
+    const speedMps = totalTime > 0 ? totalDistance / totalTime : undefined;
+
+    // compute weighted circular mean of bearings when we have good segments
+    let bearingDeg: number | undefined;
+    if (bearings.length > 0) {
+        let x = 0;
+        let y = 0;
+        for (const b of bearings) {
+            const rad = (b.bearing * Math.PI) / 180;
+            x += Math.cos(rad) * b.weight;
+            y += Math.sin(rad) * b.weight;
+        }
+        const avgRad = Math.atan2(y, x);
+        bearingDeg = (avgRad * 180) / Math.PI;
+        bearingDeg = (bearingDeg + 360) % 360;
+    } else {
+        // fallback: if we couldn't build valid recent segments, try a simple bearing
+        // from the last known snapshot to the current point even if dt or dist
+        // exceed the normal thresholds. This gives a best-effort direction when
+        // the feed doesn't provide directionId.
+        if (points.length >= 2) {
+            const a = points[points.length - 2];
+            const b = points[points.length - 1];
+            const dt = b.timestampSec - a.timestampSec;
+            const dist = haversineMeters(a.lat, a.lon, b.lat, b.lon);
+            if (dt > 0 && dist > 0) {
+                bearingDeg = calculateBearingDeg(a.lat, a.lon, b.lat, b.lon);
+                bearingDeg = (bearingDeg + 360) % 360;
+            }
+        }
     }
 
-    const speedMps = totalDistance / totalTime;
-
-    // compute weighted circular mean of bearings
-    if (bearings.length === 0) {
-        return { speedMps, reliable: true };
-    }
-    let x = 0;
-    let y = 0;
-    for (const b of bearings) {
-        const rad = (b.bearing * Math.PI) / 180;
-        x += Math.cos(rad) * b.weight;
-        y += Math.sin(rad) * b.weight;
-    }
-    const avgRad = Math.atan2(y, x);
-    const bearingDeg = (avgRad * 180) / Math.PI;
-
-    return { speedMps, reliable: true, bearingDeg: (bearingDeg + 360) % 360 };
+    return { speedMps, reliable, bearingDeg };
 }
 
 function pickSpeedMps(reportedMps?: number, computed?: { speedMps?: number; reliable: boolean }): number | undefined {
@@ -327,7 +341,20 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
         const speedKmH = resolvedSpeedMps * 3.6;
 
         const routeNames = routeMap[routeId];
-        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, (computed as any)?.bearingDeg ?? position.bearing ?? null);
+        // prefer computed bearing, fall back to reported position bearing, then to a best-effort
+        // bearing derived from the cache (last two snapshots) when available.
+        let finalBearing: number | null = (computed as any)?.bearingDeg ?? position.bearing ?? null;
+        if (finalBearing === null || finalBearing === undefined) {
+            const hist = cacheKey ? vehicleCache.get(cacheKey) : undefined;
+            if (hist && hist.length >= 2) {
+                const a = hist[hist.length - 2];
+                const b = hist[hist.length - 1];
+                if (a && b && (a.lat !== b.lat || a.lon !== b.lon)) {
+                    finalBearing = calculateBearingDeg(a.lat, a.lon, b.lat, b.lon);
+                }
+            }
+        }
+        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, finalBearing ?? null);
 
         if (!routeSpeeds[variant.variantKey]) {
             routeSpeeds[variant.variantKey] = [];
@@ -429,7 +456,18 @@ export async function getVehiclePositions(): Promise<MiwayVehicleResponse> {
             continue;
         }
         const routeNames = routeMap[routeId];
-        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, (computed as any)?.bearingDeg ?? position.bearing ?? null);
+        let finalBearing: number | null = (computed as any)?.bearingDeg ?? position.bearing ?? null;
+        if (finalBearing === null || finalBearing === undefined) {
+            const hist = vehicleCache.get(cacheKey);
+            if (hist && hist.length >= 2) {
+                const a = hist[hist.length - 2];
+                const b = hist[hist.length - 1];
+                if (a && b && (a.lat !== b.lat || a.lon !== b.lon)) {
+                    finalBearing = calculateBearingDeg(a.lat, a.lon, b.lat, b.lon);
+                }
+            }
+        }
+        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, finalBearing ?? null);
         const status = speedKmh >= 2 ? 'moving' : 'stopped';
 
         if (status === 'moving') {
