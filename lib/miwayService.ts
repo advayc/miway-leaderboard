@@ -17,7 +17,10 @@ type VehicleSnapshot = {
     timestampSec: number;
 };
 
-const vehicleCache = new Map<string, VehicleSnapshot>();
+const MAX_HISTORY = 6;
+
+// store a short history of recent snapshots per vehicle for better speed/bearing estimates
+const vehicleCache = new Map<string, VehicleSnapshot[]>();
 const VEHICLE_CACHE_TTL_SEC = 300;
 
 const MIN_SPEED_KMH = 1;
@@ -25,6 +28,8 @@ const MAX_SPEED_KMH = 75;
 const MIN_TIME_DELTA_SECONDS = 8;
 const MAX_TIME_DELTA_SECONDS = 120;
 const MAX_JUMP_METERS = 600;
+
+const MAX_TOTAL_TIME_SECONDS = 120;
 
 function haversineMeters(lat1: number, lon1: number, lat2: number, lon2: number): number {
     const toRad = (value: number) => (value * Math.PI) / 180;
@@ -57,28 +62,69 @@ function isValidSpeedKmh(speedKmh: number): boolean {
     return Number.isFinite(speedKmh) && speedKmh >= MIN_SPEED_KMH && speedKmh <= MAX_SPEED_KMH;
 }
 
+function calculateBearingDeg(lat1: number, lon1: number, lat2: number, lon2: number): number {
+    const toRad = (v: number) => (v * Math.PI) / 180;
+    const toDeg = (v: number) => (v * 180) / Math.PI;
+    const φ1 = toRad(lat1);
+    const φ2 = toRad(lat2);
+    const Δλ = toRad(lon2 - lon1);
+    const y = Math.sin(Δλ) * Math.cos(φ2);
+    const x = Math.cos(φ1) * Math.sin(φ2) - Math.sin(φ1) * Math.cos(φ2) * Math.cos(Δλ);
+    const θ = Math.atan2(y, x);
+    return (toDeg(θ) + 360) % 360;
+}
+
 function computeSpeedFromCache(
     cacheKey: string,
     lat: number,
     lon: number,
     timestampSec: number
-): { speedMps?: number; reliable: boolean } {
-    const previous = vehicleCache.get(cacheKey);
-    if (!previous) {
+): { speedMps?: number; reliable: boolean; bearingDeg?: number } {
+    const history = vehicleCache.get(cacheKey);
+    if (!history || history.length === 0) return { reliable: false };
+
+    // assemble a list of valid segments between consecutive snapshots including the new point
+    const points: VehicleSnapshot[] = [...history, { lat, lon, timestampSec }];
+
+    let totalDistance = 0;
+    let totalTime = 0;
+    const bearings: { bearing: number; weight: number }[] = [];
+
+    for (let i = 1; i < points.length; i++) {
+        const a = points[i - 1];
+        const b = points[i];
+        const dt = b.timestampSec - a.timestampSec;
+        if (dt <= 0) continue;
+        if (dt > MAX_TIME_DELTA_SECONDS) continue;
+        const dist = haversineMeters(a.lat, a.lon, b.lat, b.lon);
+        if (dist > MAX_JUMP_METERS) continue;
+        totalDistance += dist;
+        totalTime += dt;
+        const segBearing = calculateBearingDeg(a.lat, a.lon, b.lat, b.lon);
+        bearings.push({ bearing: segBearing, weight: dist });
+    }
+
+    if (totalTime < MIN_TIME_DELTA_SECONDS || totalTime > MAX_TOTAL_TIME_SECONDS) {
         return { reliable: false };
     }
 
-    const timeDeltaSeconds = timestampSec - previous.timestampSec;
-    if (timeDeltaSeconds < MIN_TIME_DELTA_SECONDS || timeDeltaSeconds > MAX_TIME_DELTA_SECONDS) {
-        return { reliable: false };
-    }
+    const speedMps = totalDistance / totalTime;
 
-    const distanceMeters = haversineMeters(previous.lat, previous.lon, lat, lon);
-    if (distanceMeters > MAX_JUMP_METERS) {
-        return { reliable: false };
+    // compute weighted circular mean of bearings
+    if (bearings.length === 0) {
+        return { speedMps, reliable: true };
     }
+    let x = 0;
+    let y = 0;
+    for (const b of bearings) {
+        const rad = (b.bearing * Math.PI) / 180;
+        x += Math.cos(rad) * b.weight;
+        y += Math.sin(rad) * b.weight;
+    }
+    const avgRad = Math.atan2(y, x);
+    const bearingDeg = (avgRad * 180) / Math.PI;
 
-    return { speedMps: distanceMeters / timeDeltaSeconds, reliable: true };
+    return { speedMps, reliable: true, bearingDeg: (bearingDeg + 360) % 360 };
 }
 
 function pickSpeedMps(reportedMps?: number, computed?: { speedMps?: number; reliable: boolean }): number | undefined {
@@ -123,16 +169,18 @@ function formatRouteVariant(
     directionId?: number | null,
     bearing?: number | null
 ): { variantKey: string; routeNumber: string; directionLabel?: string } {
+    // Keep displayed route number identical to the official short name.
+    // Variant keys may include inferred direction letters for grouping only.
     if (directionId === 0) {
-        return { variantKey: `${routeId}:N`, routeNumber: `${routeShortName}N`, directionLabel: 'Northbound' };
+        return { variantKey: `${routeId}:N`, routeNumber: routeShortName, directionLabel: 'Northbound' };
     }
     if (directionId === 1) {
-        return { variantKey: `${routeId}:S`, routeNumber: `${routeShortName}S`, directionLabel: 'Southbound' };
+        return { variantKey: `${routeId}:S`, routeNumber: routeShortName, directionLabel: 'Southbound' };
     }
 
     if (typeof bearing === 'number' && Number.isFinite(bearing)) {
         const letter = bearingToLetter(bearing);
-        return { variantKey: `${routeId}:${letter}`, routeNumber: `${routeShortName}${letter}`, directionLabel: bearingToLabel(letter) };
+        return { variantKey: `${routeId}:${letter}`, routeNumber: routeShortName, directionLabel: bearingToLabel(letter) };
     }
 
     return { variantKey: `${routeId}:U`, routeNumber: routeShortName };
@@ -232,8 +280,9 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
     const entities = feed.entity ?? [];
 
     const nowSec = Math.floor(Date.now() / 1000);
-    for (const [id, snapshot] of vehicleCache) {
-        if (nowSec - snapshot.timestampSec > VEHICLE_CACHE_TTL_SEC) {
+    for (const [id, snapshots] of vehicleCache) {
+        const last = snapshots?.[snapshots.length - 1];
+        if (!last || nowSec - last.timestampSec > VEHICLE_CACHE_TTL_SEC) {
             vehicleCache.delete(id);
         }
     }
@@ -264,11 +313,11 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
         const resolvedSpeedMps = pickSpeedMps(reportedSpeedMps, computed);
 
         if (cacheKey && timestampSeconds) {
-            vehicleCache.set(cacheKey, {
-                lat: position.latitude,
-                lon: position.longitude,
-                timestampSec: timestampSeconds,
-            });
+            const hist = vehicleCache.get(cacheKey) ?? [];
+            hist.push({ lat: position.latitude, lon: position.longitude, timestampSec: timestampSeconds });
+            // keep only the last N samples
+            if (hist.length > MAX_HISTORY) hist.splice(0, hist.length - MAX_HISTORY);
+            vehicleCache.set(cacheKey, hist);
         }
 
         if (resolvedSpeedMps === undefined) {
@@ -278,7 +327,7 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
         const speedKmH = resolvedSpeedMps * 3.6;
 
         const routeNames = routeMap[routeId];
-        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, position.bearing ?? null);
+        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, (computed as any)?.bearingDeg ?? position.bearing ?? null);
 
         if (!routeSpeeds[variant.variantKey]) {
             routeSpeeds[variant.variantKey] = [];
@@ -334,8 +383,9 @@ export async function getVehiclePositions(): Promise<MiwayVehicleResponse> {
     let stopped = 0;
 
     const nowSec = Math.floor(Date.now() / 1000);
-    for (const [id, snapshot] of vehicleCache) {
-        if (nowSec - snapshot.timestampSec > VEHICLE_CACHE_TTL_SEC) {
+    for (const [id, snapshots] of vehicleCache) {
+        const last = snapshots?.[snapshots.length - 1];
+        if (!last || nowSec - last.timestampSec > VEHICLE_CACHE_TTL_SEC) {
             vehicleCache.delete(id);
         }
     }
@@ -364,11 +414,10 @@ export async function getVehiclePositions(): Promise<MiwayVehicleResponse> {
         const resolvedSpeedMps = pickSpeedMps(reportedSpeedMps, computed);
 
         if (timestampSeconds) {
-            vehicleCache.set(cacheKey, {
-                lat: position.latitude,
-                lon: position.longitude,
-                timestampSec: timestampSeconds,
-            });
+            const hist = vehicleCache.get(cacheKey) ?? [];
+            hist.push({ lat: position.latitude, lon: position.longitude, timestampSec: timestampSeconds });
+            if (hist.length > MAX_HISTORY) hist.splice(0, hist.length - MAX_HISTORY);
+            vehicleCache.set(cacheKey, hist);
         }
 
         if (resolvedSpeedMps === undefined) {
@@ -380,7 +429,7 @@ export async function getVehiclePositions(): Promise<MiwayVehicleResponse> {
             continue;
         }
         const routeNames = routeMap[routeId];
-        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, position.bearing ?? null);
+        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, (computed as any)?.bearingDeg ?? position.bearing ?? null);
         const status = speedKmh >= 2 ? 'moving' : 'stopped';
 
         if (status === 'moving') {
