@@ -9,7 +9,7 @@
 }
 
 .tracking-stats .status-card {
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .movement-gauge-container .gauge-bar {
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
 }
 
@@ -40,7 +40,7 @@
   padding: 0.85rem 2.5rem 0.85rem 1rem;
   font-size: 1rem;
   font-family: monospace;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
   background: #fff;
   color: #1f1f1f;
@@ -95,7 +95,7 @@
   margin-bottom: 1rem;
   overflow: hidden;
   box-shadow: none;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   transition: all 200ms ease;
 }
 
@@ -110,7 +110,7 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  border-bottom: 2px solid #1f1f1f;
+  border-bottom: 2px dashed #1f1f1f;
 }
 
 .route-number {
@@ -121,7 +121,7 @@
   padding: 0.25rem 0.6rem;
   border-radius: 0;
   color: #f05a28;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
 }
 
 .route-name {
@@ -134,7 +134,7 @@
   background: transparent;
   padding: 0.25rem 0.6rem;
   border-radius: 0;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
 }
 
 .vehicle-list {
@@ -146,7 +146,7 @@
 
 .vehicle-item {
   background: #fff7f2;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
   padding: 0.65rem 0.75rem;
   cursor: pointer;
@@ -164,11 +164,11 @@
 }
 
 .vehicle-item.moving {
-  border-left: 2px solid #1f1f1f;
+  border-left: 2px dashed #1f1f1f;
 }
 
 .vehicle-item.stopped {
-  border-left: 2px solid #1f1f1f;
+  border-left: 2px dashed #1f1f1f;
 }
 
 .vehicle-id {
@@ -205,7 +205,7 @@
 }
 
 .status-badge.stopped {
-  color: #1f1f1f;
+  color: #ef4444;
 }
 
 /* No Results */
@@ -216,7 +216,7 @@
   font-style: italic;
   background: #fff7f2;
   border-radius: 0;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
 }
 
 /* Last Updated */
@@ -253,7 +253,7 @@
   transform: scale(0.96);
   opacity: 0;
   animation: modalZoomIn 220ms ease forwards;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
 }
 
 .bus-modal-close {
@@ -286,7 +286,7 @@
   color: #1f1f1f;
   padding: 1.5rem 1.25rem;
   border-radius: 0;
-  border-bottom: 2px solid #1f1f1f;
+  border-bottom: 2px dashed #1f1f1f;
 }
 
 .bus-modal-title {
@@ -303,7 +303,7 @@
   background: transparent;
   padding: 0.35rem 0.75rem;
   border-radius: 0;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   color: #f05a28;
 }
 
@@ -320,7 +320,7 @@
   background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
 }
 
 .status-indicator.moving {
@@ -330,7 +330,7 @@
 
 .status-indicator.stopped {
   background: transparent;
-  color: #1f1f1f;
+  color: #ef4444;
 }
 
 .bus-modal-body {
@@ -350,7 +350,7 @@
   padding: 0.75rem;
   background: #fff7f2;
   border-radius: 0.5rem;
-  border-left: 3px solid #f05a28;
+  border-left: 3px dashed #f05a28;
 }
 
 .detail-label {
@@ -383,7 +383,7 @@
   height: 150px;
   border-radius: 50%;
   background: #fff7f2;
-  border: 3px solid #f05a28;
+  border: 3px dashed #f05a28;
   box-shadow: 0 4px 12px rgba(240, 90, 40, 0.2);
 }
 
