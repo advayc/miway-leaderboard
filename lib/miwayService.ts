@@ -159,44 +159,28 @@ function pickSpeedMps(reportedMps?: number, computed?: { speedMps?: number; reli
     return undefined;
 }
 
-function bearingToLetter(bearing: number): 'N' | 'E' | 'S' | 'W' {
-    const deg = ((bearing % 360) + 360) % 360;
-    if (deg >= 45 && deg < 135) return 'E';
-    if (deg >= 135 && deg < 225) return 'S';
-    if (deg >= 225 && deg < 315) return 'W';
-    return 'N';
-}
-
-function bearingToLabel(letter: string): string {
-    switch (letter) {
-        case 'N': return 'Northbound';
-        case 'S': return 'Southbound';
-        case 'E': return 'Eastbound';
-        case 'W': return 'Westbound';
-        default: return 'Unknown';
-    }
-}
+// (Direction helper functions removed.)
 
 function formatRouteVariant(
     routeId: string,
     routeShortName: string,
     directionId?: number | null,
-    bearing?: number | null
+    _bearing?: number | null
 ): { variantKey: string; routeNumber: string; directionLabel?: string } {
-    // Keep displayed route number identical to the official short name.
-    // Variant keys may include inferred direction letters for grouping only.
+    // Do NOT infer or guess direction for display. Only use an explicit
+    // directionId coming from the GTFS feed to alter the visible route
+    // number. This ensures the UI never displays a guessed direction.
     if (directionId === 0) {
-        return { variantKey: `${routeId}:N`, routeNumber: routeShortName, directionLabel: 'Northbound' };
+        const letter = 'N';
+        return { variantKey: `${routeId}:${letter}`, routeNumber: `${routeShortName}${letter}`, directionLabel: 'Northbound' };
     }
     if (directionId === 1) {
-        return { variantKey: `${routeId}:S`, routeNumber: routeShortName, directionLabel: 'Southbound' };
+        const letter = 'S';
+        return { variantKey: `${routeId}:${letter}`, routeNumber: `${routeShortName}${letter}`, directionLabel: 'Southbound' };
     }
 
-    if (typeof bearing === 'number' && Number.isFinite(bearing)) {
-        const letter = bearingToLetter(bearing);
-        return { variantKey: `${routeId}:${letter}`, routeNumber: routeShortName, directionLabel: bearingToLabel(letter) };
-    }
-
+    // Unknown/unspecified direction: keep the short name unchanged and use a
+    // generic variant key. We intentionally ignore any computed bearing here.
     return { variantKey: `${routeId}:U`, routeNumber: routeShortName };
 }
 
@@ -343,6 +327,8 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
         const routeNames = routeMap[routeId];
         // prefer computed bearing, fall back to reported position bearing, then to a best-effort
         // bearing derived from the cache (last two snapshots) when available.
+        // compute a best-effort bearing for internal use (not for display)
+        // prefer computed, then reported position bearing, then cache-derived.
         let finalBearing: number | null = (computed as any)?.bearingDeg ?? position.bearing ?? null;
         if (finalBearing === null || finalBearing === undefined) {
             const hist = cacheKey ? vehicleCache.get(cacheKey) : undefined;
@@ -354,7 +340,10 @@ export async function getMiwayLeaderboard(): Promise<MiwayLeaderboardEntry[]> {
                 }
             }
         }
-        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, finalBearing ?? null);
+        // For display we must not guess direction. Only use feed-provided
+        // directionId to alter the visible route number. Do not infer a
+        // displayed direction from a computed bearing.
+        const variant = formatRouteVariant(routeId, routeNames?.shortName || routeId, directionId, undefined);
 
         if (!routeSpeeds[variant.variantKey]) {
             routeSpeeds[variant.variantKey] = [];
@@ -485,7 +474,9 @@ export async function getVehiclePositions(): Promise<MiwayVehicleResponse> {
             routeName: routeNames?.longName || `Route ${routeId}`,
             latitude: position.latitude,
             longitude: position.longitude,
-            bearing: position.bearing ?? null,
+            // prefer the computed/final bearing so consumers of this API see the
+            // inferred compass direction when available
+            bearing: finalBearing ?? null,
             speedKmh: Number.parseFloat(speedKmh.toFixed(1)),
             timestamp: timestampSeconds,
             status,
