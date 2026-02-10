@@ -8,17 +8,6 @@
   position: relative;
 }
 
-.tracking-stats.feed-pulse::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(240, 90, 40, 0.25), transparent 70%);
-  opacity: 0.7;
-  animation: feed-pulse 1s ease-out;
-  pointer-events: none;
-  border-radius: 0.5rem;
-}
-
 /* Movement Gauge */
 .movement-gauge-container {
   width: min(900px, 95%);
@@ -36,9 +25,9 @@
   width: 100%;
   padding: 0.85rem 2.5rem 0.85rem 1rem;
   font-size: 1rem;
-  font-family: 'Inter', Arial, sans-serif;
-  border: 2px solid rgba(240, 90, 40, 0.3);
-  border-radius: 0.75rem;
+  font-family: 'Monospace', monospace;
+  border: 2px solid #1f1f1f;
+  border-radius: 0;
   background: #fff;
   color: #1f1f1f;
   transition: all 200ms ease;
@@ -47,8 +36,8 @@
 
 .search-input:focus {
   outline: none;
-  border-color: #f05a28;
-  box-shadow: 0 0 0 3px rgba(240, 90, 40, 0.1);
+  border-color: #1f1f1f;
+  box-shadow: none;
 }
 
 .search-input::placeholder {
@@ -88,34 +77,37 @@
 
 .route-group {
   background: #fff;
-  border-radius: 0.75rem;
+  border-radius: 0;
   margin-bottom: 1rem;
   overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-  border: 1px solid rgba(240, 90, 40, 0.2);
+  box-shadow: none;
+  border: 2px solid #1f1f1f;
   transition: all 200ms ease;
 }
 
 .route-group:hover {
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+  box-shadow: none;
 }
 
 .route-header {
-  background: linear-gradient(135deg, #f05a28 0%, #f8b199 100%);
-  color: #fff;
+  background: #fff7f2;
+  color: #1f1f1f;
   padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   gap: 0.75rem;
+  border-bottom: 2px solid #1f1f1f;
 }
 
 .route-number {
   font-weight: bold;
   font-size: 1.1rem;
   font-family: monospace;
-  background: rgba(255, 255, 255, 0.25);
+  background: transparent;
   padding: 0.25rem 0.6rem;
-  border-radius: 0.35rem;
+  border-radius: 0;
+  color: #f05a28;
+  border: 2px solid #1f1f1f;
 }
 
 .route-name {
@@ -125,9 +117,10 @@
 
 .vehicle-count {
   font-size: 0.8rem;
-  background: rgba(255, 255, 255, 0.2);
+  background: transparent;
   padding: 0.25rem 0.6rem;
-  border-radius: 999px;
+  border-radius: 0;
+  border: 2px solid #1f1f1f;
 }
 
 .vehicle-list {
@@ -139,8 +132,8 @@
 
 .vehicle-item {
   background: #fff7f2;
-  border: 1px solid rgba(240, 90, 40, 0.15);
-  border-radius: 0.5rem;
+  border: 2px solid #1f1f1f;
+  border-radius: 0;
   padding: 0.65rem 0.75rem;
   cursor: pointer;
   transition: all 150ms ease;
@@ -151,17 +144,17 @@
 
 .vehicle-item:hover {
   background: #fde8dc;
-  border-color: #f05a28;
+  border-color: #1f1f1f;
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(240, 90, 40, 0.15);
+  box-shadow: none;
 }
 
 .vehicle-item.moving {
-  border-left: 3px solid #10b981;
+  border-left: 2px solid #1f1f1f;
 }
 
 .vehicle-item.stopped {
-  border-left: 3px solid #6b7280;
+  border-left: 2px solid #1f1f1f;
 }
 
 .vehicle-id {
@@ -185,17 +178,20 @@
 }
 
 .status-badge {
-  font-size: 1.1rem;
+  font-size: 0.7rem;
   line-height: 1;
+  font-weight: bold;
+  font-family: monospace;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .status-badge.moving {
-  animation: bus-moving 1.5s ease-in-out infinite;
+  color: #10b981;
 }
 
-@keyframes bus-moving {
-  0%, 100% { transform: translateX(0); }
-  50% { transform: translateX(2px); }
+.status-badge.stopped {
+  color: #1f1f1f;
 }
 
 /* No Results */
@@ -205,8 +201,8 @@
   color: #7a3c22;
   font-style: italic;
   background: #fff7f2;
-  border-radius: 0.75rem;
-  border: 2px dashed rgba(240, 90, 40, 0.3);
+  border-radius: 0;
+  border: 2px solid #1f1f1f;
 }
 
 /* Last Updated */
@@ -235,7 +231,7 @@
 .bus-modal-content {
   position: relative;
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 0;
   width: min(90vw, 500px);
   max-height: 90vh;
   overflow-y: auto;
@@ -243,6 +239,7 @@
   transform: scale(0.96);
   opacity: 0;
   animation: modalZoomIn 220ms ease forwards;
+  border: 2px solid #1f1f1f;
 }
 
 .bus-modal-close {
@@ -271,10 +268,11 @@
 }
 
 .bus-modal-header {
-  background: linear-gradient(135deg, #f05a28 0%, #f8b199 100%);
-  color: #fff;
+  background: #fff7f2;
+  color: #1f1f1f;
   padding: 1.5rem 1.25rem;
-  border-radius: 1rem 1rem 0 0;
+  border-radius: 0;
+  border-bottom: 2px solid #1f1f1f;
 }
 
 .bus-modal-title {
@@ -288,9 +286,11 @@
   font-family: monospace;
   font-weight: bold;
   font-size: 1.2rem;
-  background: rgba(255, 255, 255, 0.25);
+  background: transparent;
   padding: 0.35rem 0.75rem;
-  border-radius: 0.4rem;
+  border-radius: 0;
+  border: 2px solid #1f1f1f;
+  color: #f05a28;
 }
 
 .route-name-modal {
@@ -300,20 +300,23 @@
 .status-indicator {
   display: inline-block;
   padding: 0.35rem 0.85rem;
-  border-radius: 999px;
+  border-radius: 0;
   font-size: 0.85rem;
   font-weight: 600;
-  background: rgba(255, 255, 255, 0.25);
+  background: transparent;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  border: 2px solid #1f1f1f;
 }
 
 .status-indicator.moving {
-  background: rgba(16, 185, 129, 0.3);
+  background: transparent;
+  color: #10b981;
 }
 
 .status-indicator.stopped {
-  background: rgba(107, 114, 128, 0.3);
+  background: transparent;
+  color: #1f1f1f;
 }
 
 .bus-modal-body {
@@ -376,7 +379,7 @@
   left: 50%;
   width: 4px;
   height: 55px;
-  background: linear-gradient(to bottom, #f05a28 0%, #f05a28 50%, #7a3c22 50%, #7a3c22 100%);
+  background: #f05a28;
   transform-origin: bottom center;
   margin-left: -2px;
   margin-top: -55px;

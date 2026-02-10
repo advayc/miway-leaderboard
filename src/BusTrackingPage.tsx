@@ -168,7 +168,7 @@ function BusTrackingPage() {
                         <div className="vehicle-info">
                           <span className="vehicle-speed">{vehicle.speedKmh} km/h</span>
                           <span className={`status-badge ${vehicle.status}`}>
-                            {vehicle.status === 'moving' ? '🚌' : '⏸️'}
+                            {vehicle.status === 'moving' ? 'ACTIVE' : 'STOPPED'}
                           </span>
                         </div>
                       </div>
@@ -196,7 +196,7 @@ function BusTrackingPage() {
                 <span className="route-name-modal">{selectedBus.routeName}</span>
               </div>
               <div className={`status-indicator ${selectedBus.status}`}>
-                {selectedBus.status === 'moving' ? 'Moving' : 'Stopped'}
+                {selectedBus.status === 'moving' ? 'ACTIVE' : 'STOPPED'}
               </div>
             </div>
             <div className="bus-modal-body">
