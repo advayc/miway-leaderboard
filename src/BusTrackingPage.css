@@ -8,10 +8,24 @@
   position: relative;
 }
 
+.tracking-stats .status-card {
+  border: 2px solid #1f1f1f;
+  border-radius: 0;
+}
+
 /* Movement Gauge */
 .movement-gauge-container {
   width: min(900px, 95%);
   margin: 1rem 0 1.5rem;
+}
+
+.movement-gauge-container .gauge-bar {
+  border: 2px solid #1f1f1f;
+  border-radius: 0;
+}
+
+.movement-gauge-container .gauge-bar span {
+  background: #f05a28;
 }
 
 /* Search Container */
