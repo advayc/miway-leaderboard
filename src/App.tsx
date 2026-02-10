@@ -5,6 +5,7 @@ import LeaderboardPosition from './components/LeaderboardPosition'
 import { LeaderboardQueue, type LeaderboardData } from './LeaderboardQueue'
 import { Analytics } from '@vercel/analytics/react'
 import DataPage from './DataPage'
+import BusTrackingPage from './BusTrackingPage'
 
 function App() {
   const [isImageOpen, setIsImageOpen] = useState(false);
@@ -217,10 +218,12 @@ function App() {
       <nav className="nav">
         <Link to="/">Leaderboard</Link>
         <Link to="/feeds">Feed Status</Link>
+        <Link to="/tracking">Live Tracking</Link>
       </nav>
       <Routes>
         <Route path="/" element={<LeaderboardPage />} />
         <Route path="/feeds" element={<DataPage />} />
+        <Route path="/tracking" element={<BusTrackingPage />} />
       </Routes>
       {isImageOpen && (
         <div className="image-modal" onClick={() => setIsImageOpen(false)}>
