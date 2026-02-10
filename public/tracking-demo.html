@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tracking Page Demo</title>
+<style>
+body {
+  font-family: monospace;
+  background: #fff7f2;
+  padding: 20px;
+}
+
+.route-group {
+  background: #fff;
+  border: 2px dashed #1f1f1f;
+  margin-bottom: 1rem;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.route-header {
+  background: #fff7f2;
+  color: #1f1f1f;
+  padding: 0.75rem 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 2px dashed #1f1f1f;
+  cursor: pointer;
+}
+
+.route-header:hover {
+  background: #fde8dc;
+}
+
+.route-number {
+  font-weight: bold;
+  font-size: 1.1rem;
+  background: transparent;
+  padding: 0.25rem 0.6rem;
+  color: #f05a28;
+  border: 2px solid #1f1f1f;
+}
+
+.route-name {
+  flex: 1;
+  font-size: 0.95rem;
+}
+
+.vehicle-count {
+  font-size: 0.8rem;
+  background: transparent;
+  padding: 0.25rem 0.6rem;
+  border: 2px solid #1f1f1f;
+}
+
+.expand-indicator {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f05a28;
+  margin-left: auto;
+}
+
+.vehicle-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.5rem;
+  padding: 0.75rem;
+  margin-left: 1rem;
+  border-left: 2px dashed #1f1f1f;
+}
+
+.vehicle-item {
+  background: #fff7f2;
+  border: 2px dashed #1f1f1f;
+  padding: 0.65rem 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.vehicle-item.moving {
+  border-left: 3px solid #10b981;
+}
+
+.vehicle-item.stopped {
+  border-left: 3px solid #ef4444;
+}
+
+.vehicle-id {
+  font-weight: 600;
+  color: #1f1f1f;
+  font-size: 0.9rem;
+}
+
+.vehicle-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.vehicle-speed {
+  font-size: 0.85rem;
+  color: #7a3c22;
+  font-weight: 500;
+}
+
+.status-badge {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.moving {
+  color: #10b981;
+}
+
+.status-badge.stopped {
+  color: #ef4444;
+}
+
+.hidden {
+  display: none;
+}
+</style>
+</head>
+<body>
+<h1 style="text-align: center;">LIVE BUS TRACKING (Demo)</h1>
+
+<div class="route-group">
+  <div class="route-header" onclick="toggleRoute('route1')">
+    <span class="route-number">1</span>
+    <span class="route-name">Mississauga - Lakeshore</span>
+    <span class="vehicle-count">2 buses</span>
+    <span class="expand-indicator" id="expand1">+</span>
+  </div>
+  <div class="vehicle-list hidden" id="route1">
+    <div class="vehicle-item moving">
+      <div class="vehicle-id">Bus 1001</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">38 km/h</span>
+        <span class="status-badge moving">ACTIVE</span>
+      </div>
+    </div>
+    <div class="vehicle-item stopped">
+      <div class="vehicle-id">Bus 1002</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">0 km/h</span>
+        <span class="status-badge stopped">STOPPED</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="route-group">
+  <div class="route-header" onclick="toggleRoute('route2')">
+    <span class="route-number">2</span>
+    <span class="route-name">Torrance</span>
+    <span class="vehicle-count">2 buses</span>
+    <span class="expand-indicator" id="expand2">+</span>
+  </div>
+  <div class="vehicle-list hidden" id="route2">
+    <div class="vehicle-item moving">
+      <div class="vehicle-id">Bus 2001</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">45 km/h</span>
+        <span class="status-badge moving">ACTIVE</span>
+      </div>
+    </div>
+    <div class="vehicle-item moving">
+      <div class="vehicle-id">Bus 2002</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">42 km/h</span>
+        <span class="status-badge moving">ACTIVE</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="route-group">
+  <div class="route-header" onclick="toggleRoute('route3')">
+    <span class="route-number">3</span>
+    <span class="route-name">Hurontario</span>
+    <span class="vehicle-count">3 buses</span>
+    <span class="expand-indicator" id="expand3">+</span>
+  </div>
+  <div class="vehicle-list hidden" id="route3">
+    <div class="vehicle-item moving">
+      <div class="vehicle-id">Bus 3001</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">48 km/h</span>
+        <span class="status-badge moving">ACTIVE</span>
+      </div>
+    </div>
+    <div class="vehicle-item stopped">
+      <div class="vehicle-id">Bus 3002</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">0 km/h</span>
+        <span class="status-badge stopped">STOPPED</span>
+      </div>
+    </div>
+    <div class="vehicle-item moving">
+      <div class="vehicle-id">Bus 3003</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">50 km/h</span>
+        <span class="status-badge moving">ACTIVE</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="route-group">
+  <div class="route-header" onclick="toggleRoute('route26')">
+    <span class="route-number">26</span>
+    <span class="route-name">Burnhamthorpe</span>
+    <span class="vehicle-count">1 bus</span>
+    <span class="expand-indicator" id="expand26">+</span>
+  </div>
+  <div class="vehicle-list hidden" id="route26">
+    <div class="vehicle-item stopped">
+      <div class="vehicle-id">Bus 26001</div>
+      <div class="vehicle-info">
+        <span class="vehicle-speed">0 km/h</span>
+        <span class="status-badge stopped">STOPPED</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+function toggleRoute(routeId) {
+  const list = document.getElementById(routeId);
+  const expandId = 'expand' + routeId.replace('route', '');
+  const expandIndicator = document.getElementById(expandId);
+  
+  if (list.classList.contains('hidden')) {
+    list.classList.remove('hidden');
+    expandIndicator.textContent = '−';
+  } else {
+    list.classList.add('hidden');
+    expandIndicator.textContent = '+';
+  }
+}
+</script>
+</body>
+</html>
