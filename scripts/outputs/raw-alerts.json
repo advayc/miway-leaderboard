@@ -1,0 +1,3860 @@
+{
+  "header": {
+    "gtfsRealtimeVersion": "2.0",
+    "incrementality": "FULL_DATASET",
+    "timestamp": "1770739015"
+  },
+  "entity": [
+    {
+      "id": "16764",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1697475900",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "17",
+            "stopId": "1912"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "17 South - Stop 1912 on Hurontario St south of Derry Rd is closed for LRT construction. Use the temporary stop 75 metres south.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "17589",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1700077140",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "2536"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 South - Stop 2536 on Hurontario St south of Central Pky is closed for LRT construction. Use stop 1107 at Central Pky 125 metres north or 1109 at Fairview Rd 200 metres south.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "20107",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1709577300",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103",
+            "stopId": "1950"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "103 North - Stop 1950 on Hurontario St at Bristol Rd is relocated 50 metres south for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "20319",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1710338760",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "17",
+            "stopId": "1914"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "17 South - Stop 1914 on Hurontario St at Capston Dr is relocated south of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "20727",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1712178000",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103",
+            "stopId": "1107"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "103 South - Stop 1107 on Hurontario St at Central Pky is relocated south of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "26215",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1724264100",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "0329"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 South - Stop 0329 on Hurontario St at Pinetree Way is relocated to the south side of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "26345",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1724769420",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "1107"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 South -  Stop 1107 on Hurontario St at Central Pky is relocated south of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "27241",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1727953200",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "17",
+            "stopId": "0097"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "17 South - Stop 0097 on Hurontario St at Courtneypark Dr is relocated to the north side of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "27242",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1727953200",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103",
+            "stopId": "0097"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "103 South - Stop 0097 on Hurontario St at Courtneypark Dr is relocated to the north side of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "34258",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1750947360",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "4",
+            "stopId": "0402"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "4 North Service Road",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "4 East - Stop 0402 on North Service Rd at Insley Rd is closed for construction. Use stop 0403 at Stanfield Rd 350 metres east.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "4 North Service Road",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "35822",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1757596800",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "0728"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 North - Stop 0728 on Hurontario St at North Service Rd is relocated 40 metres north for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "35823",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1757597280",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "31",
+            "stopId": "0428"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "31 Ogden",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "31 South - Stop 0428 on South Service Rd at Dixie Mall North Access is closed for construction. Use stop 0427 at Haig Blvd 270 metres west.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "31 Ogden",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "37286",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1759407720",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "10"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "10 Bristol",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "10 North - Central Parkway Station parking lot is closed for construction. Stop 1798 on Central Pky: Use the temporary stop 120 metres north. Parking Lot Customers: Use layby lane near the station for pick ups and drop offs.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "10 Bristol",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "37287",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1759407780",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "53"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "53 Kennedy",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "53 North - Central Parkway Station parking lot is closed for construction. Stop 1798 on Central Pky: Use the temporary stop 120 metres north. Parking Lot Customers: Use layby lane near the station for pick ups and drop offs.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "53 Kennedy",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "38391",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1763744040",
+            "end": "1798740000"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "0330"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 North - Stop 0330 on Hurontario St at Hampshire Cres is closed for construction. Use stop 0332 at Pinewood Tr 160 metres south.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "38534",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1764181860",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "0305"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 South - Stop 0305 on Hurontario St south of Indian Valley Tr is closed for construction. Use stop 0331 at Indian Valley Tr 275 metres south.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "38564",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1764263100",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "5",
+            "stopId": "3449"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "5 Dixie",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "5 North - Stop 3449 on Dixie Rd at Lakeshore Rd is relocated north of the intersection to Orchard Hill Rd for construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "5 Dixie",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "38827",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1764773820",
+            "end": "1819767600"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "23",
+            "stopId": "0295"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "23 Lakeshore",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "23 East - Stop 0295 on Lakeshore Rd at Ibar Way is closed for construction. Use stop 0296 at Balboa Dr 220 meters east.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "23 Lakeshore",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39015",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1765455660",
+            "end": "1798776000"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "57",
+            "stopId": "3163"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "57 Courtneypark",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "57/57A West - Stop 3163 on Courtneypark Dr west of Kennedy Rd is closed for construction. Use stop 5744 at Kennedy Rd 130 metres east.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "57 Courtneypark",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39366",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767355200",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "4",
+            "stopId": "0741"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "4 North Service Road",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "4 West - Stop 0741 on Camilla Rd at Pathfinder Dr is closed for construction. Use stop 0740 at North Service Rd 210 metres south.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "4 North Service Road",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39722",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767615240",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "1",
+            "stopId": "1189"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "1 Dundas",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "1/1C West - Stop 1189 on Dundas St at Hurontario St is relocated 85 metres to the east side of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "1 Dundas",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39723",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767615360",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "101",
+            "stopId": "1189"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "101 Dundas Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "101/101A West - Stop 1189 on Dundas St at Hurontario St is relocated 85 metres to the east side of the intersection for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "101 Dundas Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39726",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767615600",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "14",
+            "stopId": "0303"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "14 Lorne Park",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "14/14A West - Stop 0303 on Front St at John St is closed for construction. Use next stop 0306 at Park St 140 metres north.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "14 Lorne Park",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39779",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767788100",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "17",
+            "stopId": "1907"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "17 North - Stop 1907 on Hurontario St at Derry Rd is relocated 100 metres south to an asphalt platform for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39780",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767788160",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103",
+            "stopId": "1907"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "103 North - Stop 1907 on Hurontario St at Derry Rd is relocated 100 metres south to an asphalt platform for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39781",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767788280",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "17",
+            "stopId": "1968"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "17 South - Stop 1968 on Hurontario St at Britannia Rd is relocated 200 metres north to a wooden platform for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39782",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767788460",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103",
+            "stopId": "1968"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "103 South - Stop 1968 on Hurontario St at Britannia Rd is relocated 200 metres north to a wooden platform for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39783",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767788580",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "70",
+            "stopId": "1968"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "70 West - Stop 1968 on Hurontario St at Britannia Rd is relocated 200 metres north to a wooden platform for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39847",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767983100",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "43",
+            "stopId": "1820"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "43 Matheson",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "43 South - Stop 1820 on Matheson Blvd at Hurontario is relocated 70 metres west for LRT construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "43 Matheson",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "39849",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1767983400",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "43",
+            "stopId": "1920"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "43 Matheson",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "43 South - Stop 1920 on Matheson Blvd east of Hurontario St is closed for LRT construction. Use stop 1820 at Hurontario St 230 metres west.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "43 Matheson",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40234",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1768830000",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "1210"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 North - Stop 1210 on Hurontario St at Fairview Rd is relocated for LRT construction. Use the temporary stop 50 metres north.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40235",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1768830300",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "53",
+            "stopId": "1210"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "53 Kennedy",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "53 North - Stop 1210 on Hurontario St at Fairview Rd is relocated for LRT construction. Use the temporary stop 50 metres north.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "53 Kennedy",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40236",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1768835580",
+            "end": "1771909140"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "22"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "DETOUR",
+        "headerText": {
+          "translation": [
+            {
+              "text": "22 Finch",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "DETOUR 22 East - Route will turn around in Humber College terminal and exit via Silver Bell Lane due to restriction on Arboretum Blvd.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "22 Finch",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40876",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1769787060",
+            "end": "1771128000"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "2",
+            "stopId": "0725"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "2 South - Stop 0725 on Hurontario St at Bronte College Crt is relocated 40 metres south of the intersection for construction.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "2 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40952",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770037500",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "14",
+            "stopId": "0287"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "14 Lorne Park",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "14A West - Stop 0287 on Southdown Rd south of Royal Windsor Dr is closed for construction. Use stop 0286 south of Lushes Ave 190 metres south.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "14 Lorne Park",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40953",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770037620",
+            "end": "1798779540"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "29",
+            "stopId": "0287"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "29 Park Royal",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "29 South - Stop 0287 on Southdown Rd south of Royal Windsor Dr is closed for construction. Use stop 0286 south of Lushes Ave 190 metres south.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "29 Park Royal",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40956",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770040680",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "1"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "1 Dundas",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, due to increased rider demand, this route will be revised to operate from Kipling Bus Terminal to Laird Road and Ridgeway Drive via University of Toronto Mississauga. Service frequencies will also be improved during weekday and weekend core hours. Visit miway.ca for more information.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "1 Dundas",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40958",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770040800",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "101"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "101 Dundas Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, due to increased rider demand, this route will be revised to operate from Kipling Bus Terminal to Laird Road and Ridgeway Drive via University of Toronto Mississauga. Service frequencies will also be improved during weekday and Saturday core hours. Visit miway.ca for more information",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "101 Dundas Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40959",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041040",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "48"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "48 Erin Mills",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, to enhance transit service connections, this route will be extended from South Common Centre to serve the University of Toronto Mississauga. Service frequencies will also be improved during weekdays and weekends.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "48 Erin Mills",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40960",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041100",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "26"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "26 Burnhamthorpe",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, to accommodate the Route 48 Erin Mills extension to University of Toronto Mississauga, this route will have a new routing into South Common Centre and bus stops at and near South Common Centre will be revised. Visit miway.ca for more information.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "26 Burnhamthorpe",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40961",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041220",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "11"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "11 Westwood",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have improved service on weekdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "11 Westwood",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40962",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041280",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "28"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "28 Confederation",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have improved service on weekdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "28 Confederation",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40963",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041280",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "109"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "109 Meadowvale Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have improved service on weekdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "109 Meadowvale Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40964",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041340",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "3"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "3 Bloor",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have improved service on weekends. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "3 Bloor",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40965",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041400",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "11"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "11 Westwood",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have improved service on weekends. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "11 Westwood",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40966",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041460",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "109"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "109 Meadowvale Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have improved service on weekends. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "109 Meadowvale Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40967",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041520",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "5"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "5 Dixie",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have additional trips on weekends. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "5 Dixie",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40968",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041580",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "7"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "7 Airport",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have additional trips on weekends. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "7 Airport",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40969",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041640",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "42"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "42 Derry",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have additional trips on weekends. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "42 Derry",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40970",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041700",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, this route will have additional trips on weekends. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40971",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041760",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "15"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "15 Drew",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "15 Drew",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40972",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041820",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "24"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "24 Northwest",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "24 Northwest",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40973",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041880",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "38"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "38 Creditview",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "38 Creditview",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40974",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041940",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "108"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "108 Financial Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "108 Financial Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40975",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770041940",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "3"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "3 Bloor",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "3 Bloor",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40976",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042000",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "39"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "39 Britannia",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "39 Britannia",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40977",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042120",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "30"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "30 Rexdale",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays and Saturdays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "30 Rexdale",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40978",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042180",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "61"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "61 Mavis",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "61 Mavis",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40980",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042180",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "66"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "66 McLaughlin",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "66 McLaughlin",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40981",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042300",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "1"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "1 Dundas",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays, Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "1 Dundas",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40982",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042360",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "11"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "11 Westwood",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays, Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "11 Westwood",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40983",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042360",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "16"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "16 Malton",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays, Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "16 Malton",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40984",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042420",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "22"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "22 Finch",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays, Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "22 Finch",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40985",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042480",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "28"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "28 Confederation",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays, Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "28 Confederation",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40986",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042540",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "101"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "101 Dundas Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays, Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "101 Dundas Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "40987",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770042600",
+            "end": "1772168400"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "109"
+          }
+        ],
+        "cause": "OTHER_CAUSE",
+        "effect": "OTHER_EFFECT",
+        "headerText": {
+          "translation": [
+            {
+              "text": "109 Meadowvale Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Starting Monday, Feb. 23, the schedule for this route will be adjusted on weekdays, Saturdays and Sundays. Please check for updated schedules.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "109 Meadowvale Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41299",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770661440",
+            "end": "1770742800"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "17"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "17 North - Stops on Hurontario St between Matheson Blvd and Watline Ave are impacted intermittently for emergency watermain repair.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41277",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770606180",
+            "end": "32503698000"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "17",
+            "stopId": "1961"
+          },
+          {
+            "routeId": "17",
+            "stopId": "1899"
+          }
+        ],
+        "effect": "DETOUR",
+        "headerText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Detour between Route 17 North at HURONTARIO ST at MATHESON BLVD and Route 17 North at HURONTARIO ST at BRUNEL RD",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "17 Hurontario",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "Detour on Route 17 North at HURONTARIO ST at MATHESON BLVD",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41339",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770737400",
+            "end": "1770740940"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "42"
+          }
+        ],
+        "cause": "MAINTENANCE",
+        "effect": "REDUCED_SERVICE",
+        "headerText": {
+          "translation": [
+            {
+              "text": "42 - Derry",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "42-4\r\n-\r\n10:30 AM\r\nto \r\n11:29 AM\r\n-\r\n -Due to a mechanical issue with the bus.\r\n-\r\nReduced Service",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "42 - Derry",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "Cancelled block or stops on Block 42-4 between 1374 and 2708",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41298",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770660780",
+            "end": "1773712800"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "70"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "DETOUR",
+        "headerText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "DETOUR 70 West - 9 am Feb 10 to 10 pm Mar 16. No right turn on Matheson Blvd from Hurontario St. Stops 1969 and 1980 will be missed.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41282",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770635460",
+            "end": "32503698000"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "25",
+            "stopId": "1851"
+          },
+          {
+            "routeId": "25",
+            "stopId": "3080"
+          },
+          {
+            "routeId": "25",
+            "stopId": "1944"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "DETOUR",
+        "headerText": {
+          "translation": [
+            {
+              "text": "25 Traders Loop",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Detour between Route 25 Clockwise at AVEBURY RD south of ALDRIDGE ST and Route 25 Clockwise at TRADERS BLVD at 180 TRADERS BLVD",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "25 Traders Loop",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "Detour on Route 25 Clockwise at AVEBURY RD south of ALDRIDGE ST",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41303",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770662040",
+            "end": "1770742800"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "103 North - Stops on Hurontario St between Matheson Blvd and Watline Ave are impacted intermittently for emergency watermain repair.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41317",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770677640",
+            "end": "32503698000"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "70",
+            "stopId": "1851"
+          },
+          {
+            "routeId": "70",
+            "stopId": "1899"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "DETOUR",
+        "headerText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Detour between Route 70 East at AVEBURY RD south of ALDRIDGE ST and Route 70 East at HURONTARIO ST at BRUNEL RD",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "Detour on Route 70 East at AVEBURY RD south of ALDRIDGE ST",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41301",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770661920",
+            "end": "1770742800"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "25"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "25 Traders Loop",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "25 Loop - Stops on Hurontario St between Matheson Blvd and Watline Ave are impacted intermittently for emergency watermain repair.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "25 Traders Loop",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41278",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770606180",
+            "end": "32503698000"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "103",
+            "stopId": "1961"
+          }
+        ],
+        "effect": "DETOUR",
+        "headerText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "Detour between Route 103 North at HURONTARIO ST at MATHESON BLVD and Route 103 North at HURONTARIO ST at BRITANNIA RD",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "103 Hurontario Express",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "Detour on Route 103 North at HURONTARIO ST at MATHESON BLVD",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "41302",
+      "alert": {
+        "activePeriod": [
+          {
+            "start": "1770661980",
+            "end": "1770742800"
+          }
+        ],
+        "informedEntity": [
+          {
+            "routeId": "70"
+          }
+        ],
+        "cause": "CONSTRUCTION",
+        "effect": "STOP_MOVED",
+        "headerText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "descriptionText": {
+          "translation": [
+            {
+              "text": "70 East - Stops on Hurontario St between Matheson Blvd and Watline Ave are impacted intermittently for emergency watermain repair.",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsHeaderText": {
+          "translation": [
+            {
+              "text": "70 Keaton",
+              "language": "en"
+            }
+          ]
+        },
+        "ttsDescriptionText": {
+          "translation": [
+            {
+              "text": "",
+              "language": "en"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

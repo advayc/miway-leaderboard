@@ -7,7 +7,9 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "fetch-miway": "node scripts/fetch-miway-json.js",
+    "fetch-miway-raw": "node scripts/fetch-miway-raw.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.6.1",

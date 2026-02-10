@@ -1,0 +1,4896 @@
+{
+  "header": {
+    "gtfsRealtimeVersion": "2.0",
+    "incrementality": "FULL_DATASET",
+    "timestamp": "1770739015"
+  },
+  "entity": [
+    {
+      "id": "1007",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345520",
+          "startDate": "20260210",
+          "routeId": "20",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.6103515625,
+          "longitude": -79.62169647216797,
+          "bearing": 44
+        },
+        "timestamp": "1770738998",
+        "vehicle": {
+          "id": "2107",
+          "label": "1007"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1010",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343728",
+          "startDate": "20260210",
+          "routeId": "103"
+        },
+        "position": {
+          "latitude": 43.572200775146484,
+          "longitude": -79.60958099365234,
+          "bearing": 47
+        },
+        "timestamp": "1770739004",
+        "vehicle": {
+          "id": "2110",
+          "label": "1010"
+        }
+      }
+    },
+    {
+      "id": "1014",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345166",
+          "startDate": "20260210",
+          "routeId": "2",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.56269073486328,
+          "longitude": -79.59210205078125,
+          "bearing": 136,
+          "speed": 6.705599784851074
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2114",
+          "label": "1014"
+        }
+      }
+    },
+    {
+      "id": "1043",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345769",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.56547164916992,
+          "longitude": -79.61717224121094,
+          "bearing": 40,
+          "speed": 15.646400451660156
+        },
+        "timestamp": "1770739005",
+        "vehicle": {
+          "id": "2143",
+          "label": "1043"
+        }
+      }
+    },
+    {
+      "id": "1110",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342862",
+          "startDate": "20260210",
+          "routeId": "110",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.54348373413086,
+          "longitude": -79.68417358398438,
+          "bearing": 143
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "2210",
+          "label": "1110"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1113",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346635",
+          "startDate": "20260210",
+          "routeId": "48"
+        },
+        "position": {
+          "latitude": 43.543670654296875,
+          "longitude": -79.6839599609375,
+          "bearing": 313
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2213",
+          "label": "1113"
+        }
+      }
+    },
+    {
+      "id": "1115",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344808",
+          "startDate": "20260210",
+          "routeId": "10",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58344268798828,
+          "longitude": -79.7585678100586,
+          "bearing": 3
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "2215",
+          "label": "1115"
+        }
+      }
+    },
+    {
+      "id": "1116",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345460",
+          "startDate": "20260210",
+          "routeId": "17",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.64629364013672,
+          "longitude": -79.70663452148438,
+          "bearing": 136,
+          "speed": 4.470399856567383
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2216",
+          "label": "1116"
+        }
+      }
+    },
+    {
+      "id": "1137",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345330",
+          "startDate": "20260210",
+          "routeId": "14",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.54916763305664,
+          "longitude": -79.60423278808594,
+          "bearing": 38,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2237",
+          "label": "1137"
+        }
+      }
+    },
+    {
+      "id": "1139",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343420",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.58009719848633,
+          "longitude": -79.61648559570312,
+          "bearing": 42,
+          "speed": 8.046719551086426
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "2239",
+          "label": "1139"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1143",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343107",
+          "startDate": "20260210",
+          "routeId": "101",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.63056945800781,
+          "longitude": -79.54963684082031,
+          "bearing": 251
+        },
+        "timestamp": "1770739004",
+        "vehicle": {
+          "id": "2243",
+          "label": "1143"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1034",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345243",
+          "startDate": "20260210",
+          "routeId": "6",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.57572937011719,
+          "longitude": -79.64531707763672,
+          "bearing": 220,
+          "speed": 0.44703999161720276
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "2134",
+          "label": "1034"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1108",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343829",
+          "startDate": "20260210",
+          "routeId": "13"
+        },
+        "position": {
+          "latitude": 43.55595016479492,
+          "longitude": -79.71479034423828,
+          "bearing": 309,
+          "speed": 7.152639865875244
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2208",
+          "label": "1108"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1109",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343830",
+          "startDate": "20260210",
+          "routeId": "13"
+        },
+        "position": {
+          "latitude": 43.51897048950195,
+          "longitude": -79.6404800415039,
+          "bearing": 315
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "2209",
+          "label": "1109"
+        }
+      }
+    },
+    {
+      "id": "1202",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343957",
+          "startDate": "20260210",
+          "routeId": "29",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.54328918457031,
+          "longitude": -79.68391418457031,
+          "bearing": 137
+        },
+        "timestamp": "1770738994",
+        "vehicle": {
+          "id": "2302",
+          "label": "1202"
+        }
+      }
+    },
+    {
+      "id": "1207",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343726",
+          "startDate": "20260210",
+          "routeId": "103"
+        },
+        "position": {
+          "latitude": 43.6494255065918,
+          "longitude": -79.71044921875,
+          "bearing": 314,
+          "speed": 12.070079803466797
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2307",
+          "label": "1207"
+        }
+      }
+    },
+    {
+      "id": "1209",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347143",
+          "startDate": "20260210",
+          "routeId": "109",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.667110443115234,
+          "longitude": -79.58657836914062,
+          "bearing": 11,
+          "speed": 8.493760108947754
+        },
+        "timestamp": "1770739004",
+        "vehicle": {
+          "id": "2309",
+          "label": "1209"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1301",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345554",
+          "startDate": "20260210",
+          "routeId": "20",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.6349983215332,
+          "longitude": -79.53882598876953,
+          "bearing": 236,
+          "speed": 4.917439937591553
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2401",
+          "label": "1301"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1302",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343185",
+          "startDate": "20260210",
+          "routeId": "101",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.63508224487305,
+          "longitude": -79.54084777832031,
+          "bearing": 35,
+          "speed": 9.387840270996094
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2402",
+          "label": "1302"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1304",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343770",
+          "startDate": "20260210",
+          "routeId": "4",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.57571792602539,
+          "longitude": -79.60972595214844,
+          "bearing": 313,
+          "speed": 1.3411200046539307
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2404",
+          "label": "1304"
+        }
+      }
+    },
+    {
+      "id": "1311",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345937",
+          "startDate": "20260210",
+          "routeId": "38"
+        },
+        "position": {
+          "latitude": 43.60500717163086,
+          "longitude": -79.76094055175781,
+          "bearing": 233
+        },
+        "timestamp": "1770739006",
+        "vehicle": {
+          "id": "2411",
+          "label": "1311"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1314",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343226",
+          "startDate": "20260210",
+          "routeId": "68",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.59559631347656,
+          "longitude": -79.66532135009766,
+          "bearing": 39,
+          "speed": 12.964159965515137
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2414",
+          "label": "1314"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1353",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346681",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.651065826416016,
+          "longitude": -79.53903198242188,
+          "bearing": 279
+        },
+        "timestamp": "1770738991",
+        "vehicle": {
+          "id": "2453",
+          "label": "1353"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1354",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345055",
+          "startDate": "20260210",
+          "routeId": "2",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.59404373168945,
+          "longitude": -79.64646911621094,
+          "bearing": 130
+        },
+        "timestamp": "1770738998",
+        "vehicle": {
+          "id": "2454",
+          "label": "1354"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1356",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343419",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.609107971191406,
+          "longitude": -79.58394622802734,
+          "bearing": 40
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "2456",
+          "label": "1356"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1359",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343369",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.608551025390625,
+          "longitude": -79.58457946777344,
+          "bearing": 40
+        },
+        "timestamp": "1770738991",
+        "vehicle": {
+          "id": "2459",
+          "label": "1359"
+        },
+        "occupancyStatus": "FEW_SEATS_AVAILABLE",
+        "occupancyPercentage": 60
+      }
+    },
+    {
+      "id": "1360",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345761",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.55745315551758,
+          "longitude": -79.70807647705078,
+          "bearing": 35,
+          "speed": 1.788159966468811
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2460",
+          "label": "1360"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1214",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345538",
+          "startDate": "20260210",
+          "routeId": "20",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.61159133911133,
+          "longitude": -79.62047576904297,
+          "bearing": 203,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2314",
+          "label": "1214"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1402",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235773",
+          "startDate": "20260210",
+          "routeId": "107",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.68781661987305,
+          "longitude": -79.5960922241211,
+          "bearing": 161,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2502",
+          "label": "1402"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1404",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235602",
+          "startDate": "20260210",
+          "routeId": "7",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.681156158447266,
+          "longitude": -79.59300231933594,
+          "bearing": 163,
+          "speed": 13.858240127563477
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "2504",
+          "label": "1404"
+        }
+      }
+    },
+    {
+      "id": "1704",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235195",
+          "startDate": "20260210",
+          "routeId": "39",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.556549072265625,
+          "longitude": -79.76239776611328,
+          "bearing": 311,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2604",
+          "label": "1704"
+        }
+      }
+    },
+    {
+      "id": "1725",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235947",
+          "startDate": "20260210",
+          "routeId": "51",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.701969146728516,
+          "longitude": -79.69109344482422,
+          "bearing": 265
+        },
+        "timestamp": "1770738992",
+        "vehicle": {
+          "id": "2625",
+          "label": "1725"
+        }
+      }
+    },
+    {
+      "id": "1730",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235550",
+          "startDate": "20260210",
+          "routeId": "7"
+        },
+        "position": {
+          "latitude": 43.65205001831055,
+          "longitude": -79.61274719238281,
+          "bearing": 94,
+          "speed": 8.493760108947754
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2630",
+          "label": "1730"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1741",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235298",
+          "startDate": "20260210",
+          "routeId": "11"
+        },
+        "position": {
+          "latitude": 43.63438415527344,
+          "longitude": -79.55858612060547,
+          "bearing": 348,
+          "speed": 21.90496063232422
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "2641",
+          "label": "1741"
+        }
+      }
+    },
+    {
+      "id": "1744",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235375",
+          "startDate": "20260210",
+          "routeId": "11",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.661163330078125,
+          "longitude": -79.57119750976562,
+          "bearing": 165,
+          "speed": 24.587200164794922
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2644",
+          "label": "1744"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1755",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235949",
+          "startDate": "20260210",
+          "routeId": "51"
+        },
+        "position": {
+          "latitude": 43.603302001953125,
+          "longitude": -79.5906982421875,
+          "bearing": 224,
+          "speed": 6.705599784851074
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2655",
+          "label": "1755"
+        }
+      }
+    },
+    {
+      "id": "1757",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235762",
+          "startDate": "20260210",
+          "routeId": "107"
+        },
+        "position": {
+          "latitude": 43.593868255615234,
+          "longitude": -79.64690399169922,
+          "bearing": 315
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2657",
+          "label": "1757"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1770",
+      "vehicle": {
+        "trip": {
+          "tripId": "29236016",
+          "startDate": "20260210",
+          "routeId": "5",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.63193130493164,
+          "longitude": -79.61571502685547,
+          "bearing": 135,
+          "speed": 6.705599784851074
+        },
+        "timestamp": "1770739006",
+        "vehicle": {
+          "id": "2670",
+          "label": "1770"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1773",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235240",
+          "startDate": "20260210",
+          "routeId": "39",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.66222381591797,
+          "longitude": -79.59241485595703,
+          "bearing": 218,
+          "speed": 12.070079803466797
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2673",
+          "label": "1773"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1777",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235196",
+          "startDate": "20260210",
+          "routeId": "39",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.63162612915039,
+          "longitude": -79.64508056640625,
+          "bearing": 233,
+          "speed": 9.387840270996094
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "2677",
+          "label": "1777"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1779",
+      "vehicle": {
+        "trip": {
+          "tripId": "29236015",
+          "startDate": "20260210",
+          "routeId": "5",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.67277908325195,
+          "longitude": -79.6840591430664,
+          "bearing": 221,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2679",
+          "label": "1779"
+        }
+      }
+    },
+    {
+      "id": "1787",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346542",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.702579498291016,
+          "longitude": -79.64398956298828,
+          "bearing": 220,
+          "speed": 12.070079803466797
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2687",
+          "label": "1787"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1790",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346936",
+          "startDate": "20260210",
+          "routeId": "61",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.619720458984375,
+          "longitude": -79.70674133300781,
+          "bearing": 131,
+          "speed": 1.3411200046539307
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2690",
+          "label": "1790"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1797",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346757",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.644962310791016,
+          "longitude": -79.56542205810547,
+          "bearing": 69
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "2697",
+          "label": "1797"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1129",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344810",
+          "startDate": "20260210",
+          "routeId": "10"
+        },
+        "position": {
+          "latitude": 43.615909576416016,
+          "longitude": -79.65760803222656,
+          "bearing": 279,
+          "speed": 9.387840270996094
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2229",
+          "label": "1129"
+        }
+      }
+    },
+    {
+      "id": "1142",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344622",
+          "startDate": "20260210",
+          "routeId": "8"
+        },
+        "position": {
+          "latitude": 43.586265563964844,
+          "longitude": -79.58777618408203,
+          "bearing": 314,
+          "speed": 6.2585601806640625
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "2242",
+          "label": "1142"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1705",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235551",
+          "startDate": "20260210",
+          "routeId": "7"
+        },
+        "position": {
+          "latitude": 43.59393310546875,
+          "longitude": -79.64678192138672,
+          "bearing": 325
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2605",
+          "label": "1705"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1710",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235601",
+          "startDate": "20260210",
+          "routeId": "7",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.617374420166016,
+          "longitude": -79.6413345336914,
+          "bearing": 219,
+          "speed": 0.8940799832344055
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2610",
+          "label": "1710"
+        }
+      }
+    },
+    {
+      "id": "1711",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235149",
+          "startDate": "20260210",
+          "routeId": "22",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.729270935058594,
+          "longitude": -79.60499572753906,
+          "bearing": 122
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2611",
+          "label": "1711"
+        }
+      }
+    },
+    {
+      "id": "1724",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235646",
+          "startDate": "20260210",
+          "routeId": "16",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.72365188598633,
+          "longitude": -79.62486267089844,
+          "bearing": 335,
+          "speed": 1.788159966468811
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2624",
+          "label": "1724"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1788",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345760",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.59217071533203,
+          "longitude": -79.66910552978516,
+          "bearing": 33,
+          "speed": 5.811520099639893
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "2688",
+          "label": "1788"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1791",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345192",
+          "startDate": "20260210",
+          "routeId": "2"
+        },
+        "position": {
+          "latitude": 43.55522918701172,
+          "longitude": -79.58769226074219,
+          "bearing": 224
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2691",
+          "label": "1791"
+        }
+      }
+    },
+    {
+      "id": "1801",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235828",
+          "startDate": "20260210",
+          "routeId": "107"
+        },
+        "position": {
+          "latitude": 43.731597900390625,
+          "longitude": -79.61061096191406,
+          "bearing": 80,
+          "speed": 11.623040199279785
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2901",
+          "label": "1801"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1804",
+      "vehicle": {
+        "trip": {
+          "tripId": "29236033",
+          "startDate": "20260210",
+          "routeId": "5"
+        },
+        "position": {
+          "latitude": 43.655853271484375,
+          "longitude": -79.64797973632812,
+          "bearing": 315,
+          "speed": 12.964159965515137
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2904",
+          "label": "1804"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1809",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235765",
+          "startDate": "20260210",
+          "routeId": "107"
+        },
+        "position": {
+          "latitude": 43.627567291259766,
+          "longitude": -79.61756134033203,
+          "bearing": 37,
+          "speed": 14.752320289611816
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2909",
+          "label": "1809"
+        },
+        "occupancyStatus": "FEW_SEATS_AVAILABLE",
+        "occupancyPercentage": 60
+      }
+    },
+    {
+      "id": "1901",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342861",
+          "startDate": "20260210",
+          "routeId": "110"
+        },
+        "position": {
+          "latitude": 43.54224395751953,
+          "longitude": -79.65991973876953,
+          "bearing": 50
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "2921",
+          "label": "1901"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1752",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235951",
+          "startDate": "20260210",
+          "routeId": "51",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.627994537353516,
+          "longitude": -79.6321792602539,
+          "bearing": 112,
+          "speed": 12.964159965515137
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2652",
+          "label": "1752"
+        }
+      }
+    },
+    {
+      "id": "1758",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235865",
+          "startDate": "20260210",
+          "routeId": "107"
+        },
+        "position": {
+          "latitude": 43.691497802734375,
+          "longitude": -79.59765625,
+          "bearing": 340
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2658",
+          "label": "1758"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1764",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235756",
+          "startDate": "20260210",
+          "routeId": "107",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.729244232177734,
+          "longitude": -79.60562896728516,
+          "bearing": 205
+        },
+        "timestamp": "1770738995",
+        "vehicle": {
+          "id": "2664",
+          "label": "1764"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1774",
+      "vehicle": {
+        "trip": {
+          "tripId": "29236020",
+          "startDate": "20260210",
+          "routeId": "5",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58464431762695,
+          "longitude": -79.55127716064453,
+          "bearing": 136,
+          "speed": 4.470399856567383
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2674",
+          "label": "1774"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1903",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344015",
+          "startDate": "20260210",
+          "routeId": "36"
+        },
+        "position": {
+          "latitude": 43.52571487426758,
+          "longitude": -79.70431518554688,
+          "bearing": 300,
+          "speed": 7.599679946899414
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2923",
+          "label": "1903"
+        }
+      }
+    },
+    {
+      "id": "2054",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346682",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.635009765625,
+          "longitude": -79.53866577148438,
+          "bearing": 241
+        },
+        "timestamp": "1770738990",
+        "vehicle": {
+          "id": "2184",
+          "label": "2054"
+        }
+      }
+    },
+    {
+      "id": "2055",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346756",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.64224624633789,
+          "longitude": -79.53376007080078,
+          "bearing": 244,
+          "speed": 14.305279731750488
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2185",
+          "label": "2055"
+        }
+      }
+    },
+    {
+      "id": "2059",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343291",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.53297805786133,
+          "longitude": -79.67063903808594,
+          "bearing": 219,
+          "speed": 2.6822400093078613
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2189",
+          "label": "2059"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2151",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346254",
+          "startDate": "20260210",
+          "routeId": "66"
+        },
+        "position": {
+          "latitude": 43.6126594543457,
+          "longitude": -79.68444061279297,
+          "bearing": 312,
+          "speed": 0.44703999161720276
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2195",
+          "label": "2151"
+        }
+      }
+    },
+    {
+      "id": "2152",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346760",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.54140090942383,
+          "longitude": -79.68180084228516,
+          "bearing": 92
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "2196",
+          "label": "2152"
+        }
+      }
+    },
+    {
+      "id": "2153",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345757",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.540164947509766,
+          "longitude": -79.74253845214844,
+          "bearing": 290
+        },
+        "timestamp": "1770739002",
+        "vehicle": {
+          "id": "2197",
+          "label": "2153"
+        }
+      }
+    },
+    {
+      "id": "2154",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346759",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.568939208984375,
+          "longitude": -79.6634750366211,
+          "bearing": 39,
+          "speed": 7.599679946899414
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2198",
+          "label": "2154"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2201",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343586",
+          "startDate": "20260210",
+          "routeId": "3",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.635921478271484,
+          "longitude": -79.56159973144531,
+          "bearing": 253,
+          "speed": 8.493760108947754
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "3201",
+          "label": "2201"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2233",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344624",
+          "startDate": "20260210",
+          "routeId": "8",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.5898323059082,
+          "longitude": -79.6476821899414,
+          "bearing": 136
+        },
+        "timestamp": "1770738992",
+        "vehicle": {
+          "id": "3233",
+          "label": "2233"
+        }
+      }
+    },
+    {
+      "id": "1742",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235432",
+          "startDate": "20260210",
+          "routeId": "30",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.71580123901367,
+          "longitude": -79.58906555175781,
+          "bearing": 270
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "2642",
+          "label": "1742"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1756",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235455",
+          "startDate": "20260210",
+          "routeId": "30",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.71479415893555,
+          "longitude": -79.65164947509766,
+          "bearing": 86,
+          "speed": 7.599679946899414
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "2656",
+          "label": "1756"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1761",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235663",
+          "startDate": "20260210",
+          "routeId": "16"
+        },
+        "position": {
+          "latitude": 43.7216796875,
+          "longitude": -79.6405258178711,
+          "bearing": 51
+        },
+        "timestamp": "1770738996",
+        "vehicle": {
+          "id": "2661",
+          "label": "1761"
+        }
+      }
+    },
+    {
+      "id": "1904",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344623",
+          "startDate": "20260210",
+          "routeId": "8",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.55620574951172,
+          "longitude": -79.58305358886719,
+          "bearing": 135,
+          "speed": 4.470399856567383
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2924",
+          "label": "1904"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2275",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346758",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.60755157470703,
+          "longitude": -79.61894226074219,
+          "bearing": 41
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "3275",
+          "label": "2275"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2203",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344547",
+          "startDate": "20260210",
+          "routeId": "31"
+        },
+        "position": {
+          "latitude": 43.60325622558594,
+          "longitude": -79.57508087158203,
+          "bearing": 315,
+          "speed": 11.623040199279785
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "3203",
+          "label": "2203"
+        }
+      }
+    },
+    {
+      "id": "2253",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345626",
+          "startDate": "20260210",
+          "routeId": "23",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.55526351928711,
+          "longitude": -79.58748626708984,
+          "bearing": 217,
+          "speed": 1.788159966468811
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "3253",
+          "label": "2253"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2255",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344341",
+          "startDate": "20260210",
+          "routeId": "90",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.590309143066406,
+          "longitude": -79.75682067871094,
+          "bearing": 272,
+          "speed": 0.8940799832344055
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "3255",
+          "label": "2255"
+        }
+      }
+    },
+    {
+      "id": "2262",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344812",
+          "startDate": "20260210",
+          "routeId": "10",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.61605453491211,
+          "longitude": -79.66091918945312,
+          "bearing": 75,
+          "speed": 10.728960037231445
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "3262",
+          "label": "2262"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2263",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345890",
+          "startDate": "20260210",
+          "routeId": "38",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58499526977539,
+          "longitude": -79.76033782958984,
+          "bearing": 314
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "3263",
+          "label": "2263"
+        }
+      }
+    },
+    {
+      "id": "2267",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343878",
+          "startDate": "20260210",
+          "routeId": "13",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.57064437866211,
+          "longitude": -79.73338317871094,
+          "bearing": 149,
+          "speed": 6.2585601806640625
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "3267",
+          "label": "2267"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2271",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345609",
+          "startDate": "20260210",
+          "routeId": "23",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.59169387817383,
+          "longitude": -79.54409790039062,
+          "bearing": 168
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "3271",
+          "label": "2271"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2274",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347055",
+          "startDate": "20260210",
+          "routeId": "109"
+        },
+        "position": {
+          "latitude": 43.634796142578125,
+          "longitude": -79.54138946533203,
+          "bearing": 218,
+          "speed": 9.834879875183105
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "3274",
+          "label": "2274"
+        }
+      }
+    },
+    {
+      "id": "2280",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346543",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.72166061401367,
+          "longitude": -79.6402359008789,
+          "bearing": 39
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "3280",
+          "label": "2280"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2281",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346177",
+          "startDate": "20260210",
+          "routeId": "66",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.65682601928711,
+          "longitude": -79.7412109375,
+          "bearing": 307
+        },
+        "timestamp": "1770739003",
+        "vehicle": {
+          "id": "3281",
+          "label": "2281"
+        }
+      }
+    },
+    {
+      "id": "2282",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346540",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.62154006958008,
+          "longitude": -79.74230194091797,
+          "bearing": 163
+        },
+        "timestamp": "1770738993",
+        "vehicle": {
+          "id": "3282",
+          "label": "2282"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2283",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346164",
+          "startDate": "20260210",
+          "routeId": "66"
+        },
+        "position": {
+          "latitude": 43.59390640258789,
+          "longitude": -79.64761352539062,
+          "bearing": 212,
+          "speed": 6.705599784851074
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "3283",
+          "label": "2283"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2284",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346457",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.58351135253906,
+          "longitude": -79.75884246826172,
+          "bearing": 177
+        },
+        "timestamp": "1770739000",
+        "vehicle": {
+          "id": "3284",
+          "label": "2284"
+        }
+      }
+    },
+    {
+      "id": "1001",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345895",
+          "startDate": "20260210",
+          "routeId": "38",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.600799560546875,
+          "longitude": -79.71643829345703,
+          "bearing": 136,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "2101",
+          "label": "1001"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1004",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346028",
+          "startDate": "20260210",
+          "routeId": "49",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.560760498046875,
+          "longitude": -79.71099090576172,
+          "bearing": 316
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "2104",
+          "label": "1004"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1005",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343516",
+          "startDate": "20260210",
+          "routeId": "3",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.60723114013672,
+          "longitude": -79.60350799560547,
+          "bearing": 36
+        },
+        "timestamp": "1770738991",
+        "vehicle": {
+          "id": "2105",
+          "label": "1005"
+        }
+      }
+    },
+    {
+      "id": "1008",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345076",
+          "startDate": "20260210",
+          "routeId": "2",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.589359283447266,
+          "longitude": -79.62935638427734,
+          "bearing": 136
+        },
+        "timestamp": "1770739000",
+        "vehicle": {
+          "id": "2108",
+          "label": "1008"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1011",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344148",
+          "startDate": "20260210",
+          "routeId": "57",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.62760925292969,
+          "longitude": -79.71676635742188,
+          "bearing": 136,
+          "speed": 8.940799713134766
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "2111",
+          "label": "1011"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1017",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343674",
+          "startDate": "20260210",
+          "routeId": "103",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.61003875732422,
+          "longitude": -79.65772247314453,
+          "bearing": 132,
+          "speed": 2.2351999282836914
+        },
+        "timestamp": "1770738999",
+        "vehicle": {
+          "id": "2117",
+          "label": "1017"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1125",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342865",
+          "startDate": "20260210",
+          "routeId": "110"
+        },
+        "position": {
+          "latitude": 43.549686431884766,
+          "longitude": -79.68775939941406,
+          "bearing": 313,
+          "speed": 16.987520217895508
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2225",
+          "label": "1125"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1204",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343985",
+          "startDate": "20260210",
+          "routeId": "36",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.523406982421875,
+          "longitude": -79.704345703125,
+          "bearing": 217
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "2304",
+          "label": "1204"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1403",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235147",
+          "startDate": "20260210",
+          "routeId": "22",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.721946716308594,
+          "longitude": -79.64066314697266,
+          "bearing": 115,
+          "speed": 5.364480018615723
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2503",
+          "label": "1403"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1703",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235376",
+          "startDate": "20260210",
+          "routeId": "11",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.71907424926758,
+          "longitude": -79.63928985595703,
+          "bearing": 133,
+          "speed": 6.2585601806640625
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2603",
+          "label": "1703"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1714",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235377",
+          "startDate": "20260210",
+          "routeId": "11",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.72185516357422,
+          "longitude": -79.64083099365234,
+          "bearing": 23
+        },
+        "timestamp": "1770739006",
+        "vehicle": {
+          "id": "2614",
+          "label": "1714"
+        }
+      }
+    },
+    {
+      "id": "1717",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235549",
+          "startDate": "20260210",
+          "routeId": "7"
+        },
+        "position": {
+          "latitude": 43.683807373046875,
+          "longitude": -79.60777282714844,
+          "bearing": 54,
+          "speed": 6.705599784851074
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2617",
+          "label": "1717"
+        }
+      }
+    },
+    {
+      "id": "1719",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235797",
+          "startDate": "20260210",
+          "routeId": "107",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.637271881103516,
+          "longitude": -79.6073989868164,
+          "bearing": 126,
+          "speed": 13.858240127563477
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2619",
+          "label": "1719"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1723",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235241",
+          "startDate": "20260210",
+          "routeId": "39",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.604339599609375,
+          "longitude": -79.70426177978516,
+          "bearing": 39,
+          "speed": 8.046719551086426
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2623",
+          "label": "1723"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1740",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235603",
+          "startDate": "20260210",
+          "routeId": "7",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.72153091430664,
+          "longitude": -79.64070129394531,
+          "bearing": 90
+        },
+        "timestamp": "1770739006",
+        "vehicle": {
+          "id": "2640",
+          "label": "1740"
+        }
+      }
+    },
+    {
+      "id": "1775",
+      "vehicle": {
+        "trip": {
+          "tripId": "29236061",
+          "startDate": "20260210",
+          "routeId": "5"
+        },
+        "position": {
+          "latitude": 43.61001205444336,
+          "longitude": -79.58457946777344,
+          "bearing": 315
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2675",
+          "label": "1775"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1776",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235242",
+          "startDate": "20260210",
+          "routeId": "39",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.58512878417969,
+          "longitude": -79.76667785644531,
+          "bearing": 314,
+          "speed": 14.752320289611816
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2676",
+          "label": "1776"
+        }
+      }
+    },
+    {
+      "id": "1783",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343421",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.546321868896484,
+          "longitude": -79.68329620361328,
+          "bearing": 43,
+          "speed": 6.2585601806640625
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "2683",
+          "label": "1783"
+        }
+      }
+    },
+    {
+      "id": "1794",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345763",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.58134460449219,
+          "longitude": -79.681640625,
+          "bearing": 220,
+          "speed": 12.964159965515137
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "2694",
+          "label": "1794"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1811",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235848",
+          "startDate": "20260210",
+          "routeId": "107",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.718894958496094,
+          "longitude": -79.63890838623047,
+          "bearing": 132,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "2911",
+          "label": "1811"
+        }
+      }
+    },
+    {
+      "id": "2057",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346837",
+          "startDate": "20260210",
+          "routeId": "61"
+        },
+        "position": {
+          "latitude": 43.60274124145508,
+          "longitude": -79.68502807617188,
+          "bearing": 334,
+          "speed": 4.470399856567383
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2187",
+          "label": "2057"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2058",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345824",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.61650848388672,
+          "longitude": -79.64228057861328,
+          "bearing": 211,
+          "speed": 6.2585601806640625
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "2188",
+          "label": "2058"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2206",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347146",
+          "startDate": "20260210",
+          "routeId": "109",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.5517463684082,
+          "longitude": -79.7212905883789,
+          "bearing": 135,
+          "speed": 12.964159965515137
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "3206",
+          "label": "2206"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2288",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346456",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.583282470703125,
+          "longitude": -79.75872039794922,
+          "bearing": 154
+        },
+        "timestamp": "1770739002",
+        "vehicle": {
+          "id": "3288",
+          "label": "2288"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2308",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343584",
+          "startDate": "20260210",
+          "routeId": "3",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.591331481933594,
+          "longitude": -79.63750457763672,
+          "bearing": 315
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4308",
+          "label": "2308"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2377",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346938",
+          "startDate": "20260210",
+          "routeId": "61",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.656578063964844,
+          "longitude": -79.74080657958984,
+          "bearing": 315
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4377",
+          "label": "2377"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2320",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344147",
+          "startDate": "20260210",
+          "routeId": "57",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.6658935546875,
+          "longitude": -79.63143920898438,
+          "bearing": 134,
+          "speed": 12.070079803466797
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4320",
+          "label": "2320"
+        }
+      }
+    },
+    {
+      "id": "2381",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345074",
+          "startDate": "20260210",
+          "routeId": "2",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.55492401123047,
+          "longitude": -79.58259582519531,
+          "bearing": 307,
+          "speed": 5.364480018615723
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4381",
+          "label": "2381"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2382",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346455",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.610347747802734,
+          "longitude": -79.7479019165039,
+          "bearing": 132,
+          "speed": 9.834879875183105
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4382",
+          "label": "2382"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2336",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346608",
+          "startDate": "20260210",
+          "routeId": "48",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58335494995117,
+          "longitude": -79.7587890625,
+          "bearing": 173
+        },
+        "timestamp": "1770738997",
+        "vehicle": {
+          "id": "4336",
+          "label": "2336"
+        }
+      }
+    },
+    {
+      "id": "2385",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346839",
+          "startDate": "20260210",
+          "routeId": "61"
+        },
+        "position": {
+          "latitude": 43.593807220458984,
+          "longitude": -79.64607238769531,
+          "bearing": 135
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4385",
+          "label": "2385"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2383",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346838",
+          "startDate": "20260210",
+          "routeId": "61"
+        },
+        "position": {
+          "latitude": 43.59395217895508,
+          "longitude": -79.6475830078125,
+          "bearing": 214,
+          "speed": 8.493760108947754
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4383",
+          "label": "2383"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2348",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345806",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.55195999145508,
+          "longitude": -79.71454620361328,
+          "bearing": 219,
+          "speed": 5.364480018615723
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4348",
+          "label": "2348"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2401",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343585",
+          "startDate": "20260210",
+          "routeId": "3",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.60037612915039,
+          "longitude": -79.61054992675781,
+          "bearing": 221,
+          "speed": 12.070079803466797
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "4401",
+          "label": "2401"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2402",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345676",
+          "startDate": "20260210",
+          "routeId": "23",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.553348541259766,
+          "longitude": -79.5836181640625,
+          "bearing": 36
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4402",
+          "label": "2402"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2403",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344904",
+          "startDate": "20260210",
+          "routeId": "28"
+        },
+        "position": {
+          "latitude": 43.57836151123047,
+          "longitude": -79.6216812133789,
+          "bearing": 274,
+          "speed": 5.364480018615723
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4403",
+          "label": "2403"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2404",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345241",
+          "startDate": "20260210",
+          "routeId": "6",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.58866500854492,
+          "longitude": -79.64599609375,
+          "bearing": 313,
+          "speed": 9.387840270996094
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "4404",
+          "label": "2404"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2413",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343877",
+          "startDate": "20260210",
+          "routeId": "13",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.53628921508789,
+          "longitude": -79.66557312011719,
+          "bearing": 135
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "4413",
+          "label": "2413"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2421",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344706",
+          "startDate": "20260210",
+          "routeId": "9",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.5725212097168,
+          "longitude": -79.66761016845703,
+          "bearing": 221,
+          "speed": 4.470399856567383
+        },
+        "timestamp": "1770739005",
+        "vehicle": {
+          "id": "4421",
+          "label": "2421"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2419",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344399",
+          "startDate": "20260210",
+          "routeId": "45"
+        },
+        "position": {
+          "latitude": 43.54224395751953,
+          "longitude": -79.7120590209961,
+          "bearing": 221
+        },
+        "timestamp": "1770739003",
+        "vehicle": {
+          "id": "4419",
+          "label": "2419"
+        }
+      }
+    },
+    {
+      "id": "2277",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345753",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.634220123291016,
+          "longitude": -79.54204559326172,
+          "bearing": 217,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "3277",
+          "label": "2277"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2278",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346937",
+          "startDate": "20260210",
+          "routeId": "61",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.65626525878906,
+          "longitude": -79.74337005615234,
+          "bearing": 310
+        },
+        "timestamp": "1770738994",
+        "vehicle": {
+          "id": "3278",
+          "label": "2278"
+        }
+      }
+    },
+    {
+      "id": "2349",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343030",
+          "startDate": "20260210",
+          "routeId": "44",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.59061813354492,
+          "longitude": -79.74273681640625,
+          "bearing": 107,
+          "speed": 8.493760108947754
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "4349",
+          "label": "2349"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2409",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344292",
+          "startDate": "20260210",
+          "routeId": "53"
+        },
+        "position": {
+          "latitude": 43.618473052978516,
+          "longitude": -79.6448745727539,
+          "bearing": 317
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4409",
+          "label": "2409"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2430",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343186",
+          "startDate": "20260210",
+          "routeId": "101",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.581146240234375,
+          "longitude": -79.61527252197266,
+          "bearing": 40,
+          "speed": 8.046719551086426
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4430",
+          "label": "2430"
+        }
+      }
+    },
+    {
+      "id": "2439",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342863",
+          "startDate": "20260210",
+          "routeId": "110",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.547080993652344,
+          "longitude": -79.66577911376953,
+          "speed": 0.44703999161720276
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "4439",
+          "label": "2439"
+        }
+      }
+    },
+    {
+      "id": "2417",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344911",
+          "startDate": "20260210",
+          "routeId": "28",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.57981491088867,
+          "longitude": -79.63996124267578,
+          "speed": 0.8940799832344055
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4417",
+          "label": "2417"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2456",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345586",
+          "startDate": "20260210",
+          "routeId": "20",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.63238525390625,
+          "longitude": -79.55775451660156,
+          "bearing": 337,
+          "speed": 17.434560775756836
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "4456",
+          "label": "2456"
+        }
+      }
+    },
+    {
+      "id": "2459",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342963",
+          "startDate": "20260210",
+          "routeId": "126",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.58290100097656,
+          "longitude": -79.64783477783203,
+          "bearing": 218,
+          "speed": 14.752320289611816
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "4459",
+          "label": "2459"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2462",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343041",
+          "startDate": "20260210",
+          "routeId": "44"
+        },
+        "position": {
+          "latitude": 43.5848503112793,
+          "longitude": -79.71796417236328,
+          "bearing": 314,
+          "speed": 7.599679946899414
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "4462",
+          "label": "2462"
+        }
+      }
+    },
+    {
+      "id": "2463",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345560",
+          "startDate": "20260210",
+          "routeId": "20",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.635677337646484,
+          "longitude": -79.53791046142578,
+          "bearing": 219
+        },
+        "timestamp": "1770738995",
+        "vehicle": {
+          "id": "4463",
+          "label": "2463"
+        }
+      }
+    },
+    {
+      "id": "2436",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347147",
+          "startDate": "20260210",
+          "routeId": "109",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58332443237305,
+          "longitude": -79.75869750976562,
+          "bearing": 135
+        },
+        "timestamp": "1770738996",
+        "vehicle": {
+          "id": "4436",
+          "label": "2436"
+        }
+      }
+    },
+    {
+      "id": "2451",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344449",
+          "startDate": "20260210",
+          "routeId": "45",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.53656768798828,
+          "longitude": -79.7005615234375,
+          "bearing": 134,
+          "speed": 6.2585601806640625
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4451",
+          "label": "2451"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2473",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345969",
+          "startDate": "20260210",
+          "routeId": "46"
+        },
+        "position": {
+          "latitude": 43.55974197387695,
+          "longitude": -79.71531677246094,
+          "bearing": 214,
+          "speed": 1.788159966468811
+        },
+        "timestamp": "1770738995",
+        "vehicle": {
+          "id": "4473",
+          "label": "2473"
+        }
+      }
+    },
+    {
+      "id": "2474",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347145",
+          "startDate": "20260210",
+          "routeId": "109",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58708572387695,
+          "longitude": -79.65800476074219,
+          "bearing": 33,
+          "speed": 17.88159942626953
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4474",
+          "label": "2474"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2480",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343515",
+          "startDate": "20260210",
+          "routeId": "3",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.638057708740234,
+          "longitude": -79.55170440673828,
+          "bearing": 72,
+          "speed": 10.728960037231445
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4480",
+          "label": "2480"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2468",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343517",
+          "startDate": "20260210",
+          "routeId": "3",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.59349822998047,
+          "longitude": -79.64608764648438,
+          "bearing": 316
+        },
+        "timestamp": "1770738990",
+        "vehicle": {
+          "id": "4468",
+          "label": "2468"
+        }
+      }
+    },
+    {
+      "id": "2426",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343187",
+          "startDate": "20260210",
+          "routeId": "101",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.542030334472656,
+          "longitude": -79.66024017333984,
+          "bearing": 46
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4426",
+          "label": "2426"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2256",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345643",
+          "startDate": "20260210",
+          "routeId": "23",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.51302719116211,
+          "longitude": -79.6331787109375,
+          "bearing": 235
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "3256",
+          "label": "2256"
+        }
+      }
+    },
+    {
+      "id": "2324",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343797",
+          "startDate": "20260210",
+          "routeId": "4",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.610023498535156,
+          "longitude": -79.5581283569336,
+          "bearing": 263
+        },
+        "timestamp": "1770739003",
+        "vehicle": {
+          "id": "4324",
+          "label": "2324"
+        }
+      }
+    },
+    {
+      "id": "2316",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343370",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.548519134521484,
+          "longitude": -79.65028381347656,
+          "bearing": 22,
+          "speed": 11.623040199279785
+        },
+        "timestamp": "1770739004",
+        "vehicle": {
+          "id": "4316",
+          "label": "2316"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2434",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344249",
+          "startDate": "20260210",
+          "routeId": "53",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58161544799805,
+          "longitude": -79.62545776367188,
+          "bearing": 27,
+          "speed": 6.2585601806640625
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "4434",
+          "label": "2434"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2241",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344450",
+          "startDate": "20260210",
+          "routeId": "45",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58345413208008,
+          "longitude": -79.75836944580078,
+          "bearing": 347
+        },
+        "timestamp": "1770738998",
+        "vehicle": {
+          "id": "3241",
+          "label": "2241"
+        }
+      }
+    },
+    {
+      "id": "2242",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342867",
+          "startDate": "20260210",
+          "routeId": "110",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.54451370239258,
+          "longitude": -79.67924499511719,
+          "bearing": 43,
+          "speed": 10.281920433044434
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "3242",
+          "label": "2242"
+        }
+      }
+    },
+    {
+      "id": "2243",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344919",
+          "startDate": "20260210",
+          "routeId": "28"
+        },
+        "position": {
+          "latitude": 43.59405517578125,
+          "longitude": -79.64726257324219,
+          "bearing": 38
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "3243",
+          "label": "2243"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2244",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347053",
+          "startDate": "20260210",
+          "routeId": "109"
+        },
+        "position": {
+          "latitude": 43.5936393737793,
+          "longitude": -79.64801025390625,
+          "bearing": 221
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "3244",
+          "label": "2244"
+        }
+      }
+    },
+    {
+      "id": "2246",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345430",
+          "startDate": "20260210",
+          "routeId": "17",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.6122932434082,
+          "longitude": -79.6607666015625,
+          "bearing": 136
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "3246",
+          "label": "2246"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2378",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346453",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.68819046020508,
+          "longitude": -79.65962982177734,
+          "bearing": 38,
+          "speed": 20.11680030822754
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4378",
+          "label": "2378"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2327",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343293",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.62922286987305,
+          "longitude": -79.55484008789062,
+          "bearing": 234
+        },
+        "timestamp": "1770739000",
+        "vehicle": {
+          "id": "4327",
+          "label": "2327"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2391",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345765",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.6705436706543,
+          "longitude": -79.57784271240234,
+          "bearing": 91,
+          "speed": 0.44703999161720276
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "4391",
+          "label": "2391"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2412",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347052",
+          "startDate": "20260210",
+          "routeId": "109"
+        },
+        "position": {
+          "latitude": 43.5440673828125,
+          "longitude": -79.70983123779297,
+          "bearing": 221,
+          "speed": 17.88159942626953
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4412",
+          "label": "2412"
+        }
+      }
+    },
+    {
+      "id": "2450",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345904",
+          "startDate": "20260210",
+          "routeId": "38",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.57858657836914,
+          "longitude": -79.6231460571289,
+          "bearing": 301,
+          "speed": 8.940799713134766
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "4450",
+          "label": "2450"
+        }
+      }
+    },
+    {
+      "id": "2467",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346679",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.597843170166016,
+          "longitude": -79.63013458251953,
+          "bearing": 227,
+          "speed": 0.8940799832344055
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4467",
+          "label": "2467"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2478",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342961",
+          "startDate": "20260210",
+          "routeId": "126",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.63560104370117,
+          "longitude": -79.58821868896484,
+          "bearing": 218,
+          "speed": 15.199359893798828
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "4478",
+          "label": "2478"
+        }
+      }
+    },
+    {
+      "id": "2341",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344203",
+          "startDate": "20260210",
+          "routeId": "57",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.6530647277832,
+          "longitude": -79.675048828125,
+          "bearing": 243,
+          "speed": 12.517120361328125
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4341",
+          "label": "2341"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2469",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343727",
+          "startDate": "20260210",
+          "routeId": "103"
+        },
+        "position": {
+          "latitude": 43.597511291503906,
+          "longitude": -79.63997650146484,
+          "bearing": 316,
+          "speed": 4.023359775543213
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4469",
+          "label": "2469"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2471",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344811",
+          "startDate": "20260210",
+          "routeId": "10"
+        },
+        "position": {
+          "latitude": 43.58066940307617,
+          "longitude": -79.73108673095703,
+          "bearing": 215,
+          "speed": 9.387840270996094
+        },
+        "timestamp": "1770739008",
+        "vehicle": {
+          "id": "4471",
+          "label": "2471"
+        }
+      }
+    },
+    {
+      "id": "2330",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343105",
+          "startDate": "20260210",
+          "routeId": "101",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.54048156738281,
+          "longitude": -79.6739730834961,
+          "bearing": 195,
+          "speed": 7.599679946899414
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4330",
+          "label": "2330"
+        }
+      }
+    },
+    {
+      "id": "2441",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344714",
+          "startDate": "20260210",
+          "routeId": "9",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.54066467285156,
+          "longitude": -79.74304962158203,
+          "bearing": 225
+        },
+        "timestamp": "1770738994",
+        "vehicle": {
+          "id": "4441",
+          "label": "2441"
+        }
+      }
+    },
+    {
+      "id": "2444",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342856",
+          "startDate": "20260210",
+          "routeId": "110"
+        },
+        "position": {
+          "latitude": 43.512603759765625,
+          "longitude": -79.63302612304688,
+          "bearing": 139
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4444",
+          "label": "2444"
+        }
+      }
+    },
+    {
+      "id": "2453",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343031",
+          "startDate": "20260210",
+          "routeId": "44",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58381652832031,
+          "longitude": -79.75897979736328,
+          "bearing": 197
+        },
+        "timestamp": "1770739000",
+        "vehicle": {
+          "id": "4453",
+          "label": "2453"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "1737",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235955",
+          "startDate": "20260210",
+          "routeId": "51"
+        },
+        "position": {
+          "latitude": 43.66191864013672,
+          "longitude": -79.67974853515625,
+          "bearing": 318,
+          "speed": 9.387840270996094
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "2637",
+          "label": "1737"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1798",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346935",
+          "startDate": "20260210",
+          "routeId": "61",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.59613800048828,
+          "longitude": -79.67634582519531,
+          "bearing": 124,
+          "speed": 12.070079803466797
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2698",
+          "label": "1798"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1784",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346167",
+          "startDate": "20260210",
+          "routeId": "66"
+        },
+        "position": {
+          "latitude": 43.652984619140625,
+          "longitude": -79.7387466430664,
+          "bearing": 315,
+          "speed": 13.858240127563477
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "2684",
+          "label": "1784"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2454",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344204",
+          "startDate": "20260210",
+          "routeId": "57",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.66349411010742,
+          "longitude": -79.59243774414062,
+          "bearing": 315
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4454",
+          "label": "2454"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2435",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343072",
+          "startDate": "20260210",
+          "routeId": "44",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.575313568115234,
+          "longitude": -79.70512390136719,
+          "bearing": 136,
+          "speed": 10.281920433044434
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "4435",
+          "label": "2435"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "1906",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344250",
+          "startDate": "20260210",
+          "routeId": "53",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.645084381103516,
+          "longitude": -79.69952392578125,
+          "bearing": 106,
+          "speed": 4.470399856567383
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2926",
+          "label": "1906"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "1907",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345922",
+          "startDate": "20260210",
+          "routeId": "38"
+        },
+        "position": {
+          "latitude": 43.570552825927734,
+          "longitude": -79.65166473388672,
+          "bearing": 251,
+          "speed": 9.387840270996094
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "2927",
+          "label": "1907"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2052",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346179",
+          "startDate": "20260210",
+          "routeId": "66",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.641544342041016,
+          "longitude": -79.72367095947266,
+          "bearing": 140,
+          "speed": 1.3411200046539307
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "2182",
+          "label": "2052"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2053",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346454",
+          "startDate": "20260210",
+          "scheduleRelationship": "CANCELED",
+          "routeId": "42",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.58687973022461,
+          "longitude": -79.75955200195312,
+          "bearing": 45
+        },
+        "timestamp": "1770738994",
+        "vehicle": {
+          "id": "2183",
+          "label": "2053"
+        }
+      }
+    },
+    {
+      "id": "2202",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344400",
+          "startDate": "20260210",
+          "routeId": "45"
+        },
+        "position": {
+          "latitude": 43.512733459472656,
+          "longitude": -79.63323974609375,
+          "bearing": 139
+        },
+        "timestamp": "1770738998",
+        "vehicle": {
+          "id": "3202",
+          "label": "2202"
+        }
+      }
+    },
+    {
+      "id": "2218",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346678",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.570335388183594,
+          "longitude": -79.6622543334961,
+          "bearing": 224
+        },
+        "timestamp": "1770738932",
+        "vehicle": {
+          "id": "3218",
+          "label": "2218"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2209",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342855",
+          "startDate": "20260210",
+          "routeId": "110",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.593692779541016,
+          "longitude": -79.64761352539062,
+          "bearing": 41
+        },
+        "timestamp": "1770739004",
+        "vehicle": {
+          "id": "3209",
+          "label": "2209"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2211",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345393",
+          "startDate": "20260210",
+          "routeId": "17"
+        },
+        "position": {
+          "latitude": 43.64144515991211,
+          "longitude": -79.69969940185547,
+          "bearing": 316,
+          "speed": 15.199359893798828
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "3211",
+          "label": "2211"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2215",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343922",
+          "startDate": "20260210",
+          "routeId": "29"
+        },
+        "position": {
+          "latitude": 43.5124626159668,
+          "longitude": -79.64672088623047,
+          "bearing": 37,
+          "speed": 8.046719551086426
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "3215",
+          "label": "2215"
+        }
+      }
+    },
+    {
+      "id": "2217",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345479",
+          "startDate": "20260210",
+          "routeId": "17"
+        },
+        "position": {
+          "latitude": 43.594200134277344,
+          "longitude": -79.64664459228516,
+          "bearing": 121
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "3217",
+          "label": "2217"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2220",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344497",
+          "startDate": "20260210",
+          "routeId": "31",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58295440673828,
+          "longitude": -79.567138671875,
+          "bearing": 140
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "3220",
+          "label": "2220"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2223",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342864",
+          "startDate": "20260210",
+          "routeId": "110",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.58534622192383,
+          "longitude": -79.6590805053711,
+          "bearing": 199
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "3223",
+          "label": "2223"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2224",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347054",
+          "startDate": "20260210",
+          "routeId": "109"
+        },
+        "position": {
+          "latitude": 43.6606330871582,
+          "longitude": -79.59376525878906,
+          "bearing": 223,
+          "speed": 16.09343910217285
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "3224",
+          "label": "2224"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2276",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345061",
+          "startDate": "20260210",
+          "routeId": "2"
+        },
+        "position": {
+          "latitude": 43.574581146240234,
+          "longitude": -79.60806274414062,
+          "bearing": 311,
+          "speed": 7.599679946899414
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "3276",
+          "label": "2276"
+        }
+      }
+    },
+    {
+      "id": "1910",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344948",
+          "startDate": "20260210",
+          "routeId": "43"
+        },
+        "position": {
+          "latitude": 43.59999465942383,
+          "longitude": -79.77330017089844,
+          "bearing": 260
+        },
+        "timestamp": "1770739003",
+        "vehicle": {
+          "id": "2930",
+          "label": "1910"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2279",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346175",
+          "startDate": "20260210",
+          "routeId": "66",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.60820770263672,
+          "longitude": -79.6785659790039,
+          "bearing": 135,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "3279",
+          "label": "2279"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2227",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343956",
+          "startDate": "20260210",
+          "routeId": "29",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.51371765136719,
+          "longitude": -79.63357543945312,
+          "bearing": 136,
+          "speed": 13.858240127563477
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "3227",
+          "label": "2227"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2286",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346680",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.6368522644043,
+          "longitude": -79.5868911743164,
+          "bearing": 216,
+          "speed": 15.199359893798828
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "3286",
+          "label": "2286"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2287",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346761",
+          "startDate": "20260210",
+          "routeId": "26",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.54386520385742,
+          "longitude": -79.68460083007812
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "3287",
+          "label": "2287"
+        }
+      }
+    },
+    {
+      "id": "2303",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344710",
+          "startDate": "20260210",
+          "routeId": "9",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.56033706665039,
+          "longitude": -79.71452331542969,
+          "bearing": 226
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4303",
+          "label": "2303"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2304",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343106",
+          "startDate": "20260210",
+          "routeId": "101",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.57961654663086,
+          "longitude": -79.61721801757812,
+          "bearing": 225
+        },
+        "timestamp": "1770739005",
+        "vehicle": {
+          "id": "4304",
+          "label": "2304"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2317",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344624",
+          "startDate": "20260210",
+          "routeId": "8",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.571510314941406,
+          "longitude": -79.64933013916016,
+          "bearing": 221,
+          "speed": 12.964159965515137
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4317",
+          "label": "2317"
+        }
+      }
+    },
+    {
+      "id": "2305",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345064",
+          "startDate": "20260210",
+          "routeId": "2"
+        },
+        "position": {
+          "latitude": 43.58010482788086,
+          "longitude": -79.61611938476562,
+          "bearing": 321
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4305",
+          "label": "2305"
+        },
+        "occupancyStatus": "STANDING_ROOM_ONLY",
+        "occupancyPercentage": 60
+      }
+    },
+    {
+      "id": "2309",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345949",
+          "startDate": "20260210",
+          "routeId": "46",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.5777587890625,
+          "longitude": -79.7710189819336,
+          "bearing": 225
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "4309",
+          "label": "2309"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2315",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343796",
+          "startDate": "20260210",
+          "routeId": "4",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.577415466308594,
+          "longitude": -79.61244201660156,
+          "bearing": 120
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4315",
+          "label": "2315"
+        }
+      }
+    },
+    {
+      "id": "2429",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344809",
+          "startDate": "20260210",
+          "routeId": "10",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.59067916870117,
+          "longitude": -79.71953582763672,
+          "bearing": 38,
+          "speed": 11.175999641418457
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "4429",
+          "label": "2429"
+        }
+      }
+    },
+    {
+      "id": "2347",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343032",
+          "startDate": "20260210",
+          "routeId": "44"
+        },
+        "position": {
+          "latitude": 43.54787063598633,
+          "longitude": -79.66388702392578,
+          "bearing": 270
+        },
+        "timestamp": "1770738990",
+        "vehicle": {
+          "id": "4347",
+          "label": "2347"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    },
+    {
+      "id": "2447",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347051",
+          "startDate": "20260210",
+          "routeId": "109"
+        },
+        "position": {
+          "latitude": 43.581783294677734,
+          "longitude": -79.7619400024414,
+          "bearing": 316,
+          "speed": 16.987520217895508
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "4447",
+          "label": "2447"
+        }
+      }
+    },
+    {
+      "id": "2476",
+      "vehicle": {
+        "trip": {
+          "tripId": "29342967",
+          "startDate": "20260210",
+          "routeId": "126",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.54698944091797,
+          "longitude": -79.66590881347656,
+          "bearing": 54,
+          "speed": 4.470399856567383
+        },
+        "timestamp": "1770739002",
+        "vehicle": {
+          "id": "4476",
+          "label": "2476"
+        },
+        "occupancyStatus": "STANDING_ROOM_ONLY",
+        "occupancyPercentage": 60
+      }
+    },
+    {
+      "id": "2472",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343675",
+          "startDate": "20260210",
+          "routeId": "103",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.65830993652344,
+          "longitude": -79.72300720214844,
+          "bearing": 135
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "4472",
+          "label": "2472"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2302",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343828",
+          "startDate": "20260210",
+          "routeId": "13"
+        },
+        "position": {
+          "latitude": 43.58179473876953,
+          "longitude": -79.75240325927734,
+          "bearing": 311,
+          "speed": 8.940799713134766
+        },
+        "timestamp": "1770739012",
+        "vehicle": {
+          "id": "4302",
+          "label": "2302"
+        }
+      }
+    },
+    {
+      "id": "2376",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346544",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.72154998779297,
+          "longitude": -79.640380859375,
+          "bearing": 39
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4376",
+          "label": "2376"
+        }
+      }
+    },
+    {
+      "id": "2339",
+      "vehicle": {
+        "trip": {
+          "tripId": "29235807",
+          "startDate": "20260210",
+          "routeId": "107"
+        },
+        "position": {
+          "latitude": 43.71275329589844,
+          "longitude": -79.6304702758789,
+          "bearing": 318,
+          "speed": 9.834879875183105
+        },
+        "timestamp": "1770739014",
+        "vehicle": {
+          "id": "4339",
+          "label": "2339"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2384",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346541",
+          "startDate": "20260210",
+          "routeId": "42",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.6529541015625,
+          "longitude": -79.69878387451172,
+          "bearing": 219,
+          "speed": 13.858240127563477
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "4384",
+          "label": "2384"
+        }
+      }
+    },
+    {
+      "id": "2333",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345125",
+          "startDate": "20260210",
+          "routeId": "2",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.59440612792969,
+          "longitude": -79.64656066894531,
+          "bearing": 180
+        },
+        "timestamp": "1770738994",
+        "vehicle": {
+          "id": "4333",
+          "label": "2333"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2325",
+      "vehicle": {
+        "trip": {
+          "tripId": "29343292",
+          "startDate": "20260210",
+          "routeId": "1",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.580039978027344,
+          "longitude": -79.6167221069336,
+          "bearing": 216,
+          "speed": 5.364480018615723
+        },
+        "timestamp": "1770739001",
+        "vehicle": {
+          "id": "4325",
+          "label": "2325"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2387",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346836",
+          "startDate": "20260210",
+          "routeId": "61"
+        },
+        "position": {
+          "latitude": 43.656028747558594,
+          "longitude": -79.74393463134766,
+          "bearing": 41
+        },
+        "timestamp": "1770739011",
+        "vehicle": {
+          "id": "4387",
+          "label": "2387"
+        }
+      }
+    },
+    {
+      "id": "2389",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345843",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.65436553955078,
+          "longitude": -79.60009765625,
+          "bearing": 218,
+          "speed": 15.646400451660156
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4389",
+          "label": "2389"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2390",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345762",
+          "startDate": "20260210",
+          "routeId": "35",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.626731872558594,
+          "longitude": -79.63041687011719,
+          "bearing": 32,
+          "speed": 4.917439937591553
+        },
+        "timestamp": "1770739009",
+        "vehicle": {
+          "id": "4390",
+          "label": "2390"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 20
+      }
+    },
+    {
+      "id": "2392",
+      "vehicle": {
+        "trip": {
+          "tripId": "29346184",
+          "startDate": "20260210",
+          "routeId": "66"
+        },
+        "position": {
+          "latitude": 43.593692779541016,
+          "longitude": -79.64582061767578,
+          "bearing": 128
+        },
+        "timestamp": "1770739013",
+        "vehicle": {
+          "id": "4392",
+          "label": "2392"
+        }
+      }
+    },
+    {
+      "id": "2343",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344807",
+          "startDate": "20260210",
+          "routeId": "10"
+        },
+        "position": {
+          "latitude": 43.593711853027344,
+          "longitude": -79.645751953125,
+          "bearing": 312
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4343",
+          "label": "2343"
+        }
+      }
+    },
+    {
+      "id": "2352",
+      "vehicle": {
+        "trip": {
+          "tripId": "29344715",
+          "startDate": "20260210",
+          "routeId": "9",
+          "directionId": 6
+        },
+        "position": {
+          "latitude": 43.557838439941406,
+          "longitude": -79.70410919189453,
+          "bearing": 221,
+          "speed": 1.788159966468811
+        },
+        "timestamp": "1770738989",
+        "vehicle": {
+          "id": "4352",
+          "label": "2352"
+        }
+      }
+    },
+    {
+      "id": "2416",
+      "vehicle": {
+        "trip": {
+          "tripId": "29345291",
+          "startDate": "20260210",
+          "routeId": "6",
+          "directionId": 1
+        },
+        "position": {
+          "latitude": 43.55898666381836,
+          "longitude": -79.64558410644531,
+          "bearing": 45
+        },
+        "timestamp": "1770739010",
+        "vehicle": {
+          "id": "4416",
+          "label": "2416"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE"
+      }
+    },
+    {
+      "id": "2418",
+      "vehicle": {
+        "trip": {
+          "tripId": "29347144",
+          "startDate": "20260210",
+          "routeId": "109",
+          "directionId": 5
+        },
+        "position": {
+          "latitude": 43.6301155090332,
+          "longitude": -79.61441802978516,
+          "bearing": 42
+        },
+        "timestamp": "1770739007",
+        "vehicle": {
+          "id": "4418",
+          "label": "2418"
+        },
+        "occupancyStatus": "MANY_SEATS_AVAILABLE",
+        "occupancyPercentage": 40
+      }
+    }
+  ]
+}
