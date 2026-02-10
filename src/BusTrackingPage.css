@@ -180,11 +180,11 @@
 }
 
 .vehicle-item.moving {
-  border-left: 2px solid #1f1f1f;
+  border-left: 3px solid #10b981;
 }
 
 .vehicle-item.stopped {
-  border-left: 2px solid #1f1f1f;
+  border-left: 3px solid #ef4444;
 }
 
 .vehicle-id {
@@ -365,7 +365,7 @@
   align-items: center;
   padding: 0.75rem;
   background: #fff7f2;
-  border-radius: 0.5rem;
+  border-radius: 0;
   border-left: 3px solid #f05a28;
 }
 
