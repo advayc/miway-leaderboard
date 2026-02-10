@@ -33,6 +33,7 @@ function BusTrackingPage() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedBus, setSelectedBus] = useState<MiwayVehicle | null>(null);
   const [feedPulse, setFeedPulse] = useState(false);
+  const [expandedRoutes, setExpandedRoutes] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     const loadData = async () => {
@@ -85,6 +86,16 @@ function BusTrackingPage() {
 
   const movingRatio = vehicleData?.stats ? Math.min(100, Math.round((vehicleData.stats.moving / Math.max(vehicleData.stats.total, 1)) * 100)) : 0;
   const stoppedRatio = vehicleData?.stats ? 100 - movingRatio : 0;
+
+  const toggleRoute = (routeNumber: string) => {
+    const newExpanded = new Set(expandedRoutes);
+    if (newExpanded.has(routeNumber)) {
+      newExpanded.delete(routeNumber);
+    } else {
+      newExpanded.add(routeNumber);
+    }
+    setExpandedRoutes(newExpanded);
+  };
 
   return (
     <div className="wrapper">
@@ -150,30 +161,36 @@ function BusTrackingPage() {
             ) : (
               routes.map((route) => (
                 <div key={route.routeNumber} className="route-group">
-                  <div className="route-header">
+                  <div 
+                    className="route-header"
+                    onClick={() => toggleRoute(route.routeNumber)}
+                  >
                     <span className="route-number">{route.routeNumber}</span>
                     <span className="route-name">{route.routeName}</span>
                     <span className="vehicle-count">{route.vehicles.length} bus{route.vehicles.length !== 1 ? 'es' : ''}</span>
+                    <span className="expand-indicator">{expandedRoutes.has(route.routeNumber) ? '−' : '+'}</span>
                   </div>
-                  <div className="vehicle-list">
-                    {route.vehicles.map((vehicle) => (
-                      <div
-                        key={vehicle.id}
-                        className={`vehicle-item ${vehicle.status}`}
-                        onClick={() => setSelectedBus(vehicle)}
-                      >
-                        <div className="vehicle-id">
-                          {vehicle.label || vehicle.id}
+                  {expandedRoutes.has(route.routeNumber) && (
+                    <div className="vehicle-list">
+                      {route.vehicles.map((vehicle) => (
+                        <div
+                          key={vehicle.id}
+                          className={`vehicle-item ${vehicle.status}`}
+                          onClick={() => setSelectedBus(vehicle)}
+                        >
+                          <div className="vehicle-id">
+                            {vehicle.label || vehicle.id}
+                          </div>
+                          <div className="vehicle-info">
+                            <span className="vehicle-speed">{vehicle.speedKmh} km/h</span>
+                            <span className={`status-badge ${vehicle.status}`}>
+                              {vehicle.status === 'moving' ? 'ACTIVE' : 'STOPPED'}
+                            </span>
+                          </div>
                         </div>
-                        <div className="vehicle-info">
-                          <span className="vehicle-speed">{vehicle.speedKmh} km/h</span>
-                          <span className={`status-badge ${vehicle.status}`}>
-                            {vehicle.status === 'moving' ? 'ACTIVE' : 'STOPPED'}
-                          </span>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               ))
             )}

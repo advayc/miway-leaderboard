@@ -9,7 +9,7 @@
 }
 
 .tracking-stats .status-card {
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .movement-gauge-container .gauge-bar {
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
 }
 
@@ -40,7 +40,7 @@
   padding: 0.85rem 2.5rem 0.85rem 1rem;
   font-size: 1rem;
   font-family: monospace;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
   background: #fff;
   color: #1f1f1f;
@@ -95,7 +95,7 @@
   margin-bottom: 1rem;
   overflow: hidden;
   box-shadow: none;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   transition: all 200ms ease;
 }
 
@@ -110,7 +110,13 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  border-bottom: 2px solid #1f1f1f;
+  border-bottom: 2px dashed #1f1f1f;
+  cursor: pointer;
+  transition: background 200ms ease;
+}
+
+.route-header:hover {
+  background: #fde8dc;
 }
 
 .route-number {
@@ -137,16 +143,26 @@
   border: 2px solid #1f1f1f;
 }
 
+.expand-indicator {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #f05a28;
+  margin-left: auto;
+  user-select: none;
+}
+
 .vehicle-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
   gap: 0.5rem;
   padding: 0.75rem;
+  margin-left: 1rem;
+  border-left: 2px dashed #1f1f1f;
 }
 
 .vehicle-item {
   background: #fff7f2;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
   border-radius: 0;
   padding: 0.65rem 0.75rem;
   cursor: pointer;
@@ -205,7 +221,7 @@
 }
 
 .status-badge.stopped {
-  color: #1f1f1f;
+  color: #ef4444;
 }
 
 /* No Results */
@@ -216,7 +232,7 @@
   font-style: italic;
   background: #fff7f2;
   border-radius: 0;
-  border: 2px solid #1f1f1f;
+  border: 2px dashed #1f1f1f;
 }
 
 /* Last Updated */
@@ -330,7 +346,7 @@
 
 .status-indicator.stopped {
   background: transparent;
-  color: #1f1f1f;
+  color: #ef4444;
 }
 
 .bus-modal-body {
