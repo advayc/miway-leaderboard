@@ -27,6 +27,7 @@ interface MiwayVehicleResponse {
 }
 
 function BusTrackingPage() {
+  const PULSE_ANIMATION_DURATION = 700; // ms, matches CSS animation duration
   const [vehicleData, setVehicleData] = useState<MiwayVehicleResponse | null>(null);
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
@@ -44,7 +45,7 @@ function BusTrackingPage() {
         console.error('Failed to load vehicle data:', error);
       } finally {
         setLoading(false);
-        setTimeout(() => setFeedPulse(false), 700);
+        setTimeout(() => setFeedPulse(false), PULSE_ANIMATION_DURATION);
       }
     };
 
