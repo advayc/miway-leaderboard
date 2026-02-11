@@ -704,6 +704,8 @@ type MapControlsProps = {
   showLocate?: boolean;
   /** Show fullscreen toggle button (default: false) */
   showFullscreen?: boolean;
+  /** Show rotate toggle button (default: false) */
+  showRotateToggle?: boolean;
   /** Additional CSS classes for the controls container */
   className?: string;
   /** Callback with user coordinates when located */
@@ -755,11 +757,13 @@ function MapControls({
   showCompass = false,
   showLocate = false,
   showFullscreen = false,
+  showRotateToggle = false,
   className,
   onLocate,
 }: MapControlsProps) {
   const { map } = useMap();
   const [waitingForLocation, setWaitingForLocation] = useState(false);
+  const [rotateEnabled, setRotateEnabled] = useState<boolean>(true);
 
   const handleZoomIn = useCallback(() => {
     map?.zoomTo(map.getZoom() + 1, { duration: 300 });
@@ -808,6 +812,34 @@ function MapControls({
     }
   }, [map]);
 
+  const handleToggleRotate = useCallback(() => {
+    if (!map || !map.dragRotate) return;
+    try {
+      const enabled = map.dragRotate.isEnabled();
+      if (enabled) {
+        map.dragRotate.disable();
+        if (map.touchZoomRotate) map.touchZoomRotate.disable();
+        setRotateEnabled(false);
+      } else {
+        map.dragRotate.enable();
+        if (map.touchZoomRotate) map.touchZoomRotate.enable();
+        setRotateEnabled(true);
+      }
+    } catch (e) {
+      console.warn('Failed to toggle rotate handler', e);
+    }
+  }, [map]);
+
+  useEffect(() => {
+    if (!map) return;
+    try {
+      const enabled = !!(map.dragRotate && map.dragRotate.isEnabled());
+      setRotateEnabled(enabled);
+    } catch (e) {
+      setRotateEnabled(true);
+    }
+  }, [map]);
+
   return (
     <div
       className={cn(
@@ -850,6 +882,16 @@ function MapControls({
         <ControlGroup>
           <ControlButton onClick={handleFullscreen} label="Toggle fullscreen">
             <Maximize className="map-icon" />
+          </ControlButton>
+        </ControlGroup>
+      )}
+      {showRotateToggle && (
+        <ControlGroup>
+          <ControlButton
+            onClick={handleToggleRotate}
+            label={rotateEnabled ? 'Disable map rotation' : 'Enable map rotation'}
+          >
+            <span className="map-icon" aria-hidden>{rotateEnabled ? '↺' : '↻'}</span>
           </ControlButton>
         </ControlGroup>
       )}

@@ -190,8 +190,11 @@ const MapView = memo(function MapView({ vehicles, center, onSelectBus }: MapView
       center={center} 
       zoom={11}
       className="live-map"
-    >
-      <MapControls position="bottom-right" showZoom showLocate />
+      // expose rotate toggle in controls
+      >
+      {/* Add controls with rotate toggle enabled */}
+      <MapControls position="bottom-right" showZoom showLocate showRotateToggle />
+      
       
       {/* Default landmarks - City Centre and GO terminals */}
       {DEFAULT_LANDMARKS.map((landmark) => (

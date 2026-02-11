@@ -281,20 +281,34 @@ function BusTrackingPage() {
       const query = searchQuery.toLowerCase().trim();
 
       // routeNumber may include a trailing direction letter (eg. "26N").
-      // Also match against the base route number (eg. "26").
-      const routeNum = vehicle.routeNumber?.toLowerCase() || '';
+      // When the query is numeric-only, require an exact base-number match
+      // (so `26` matches `26` and `26N` but `2` won't match `26`).
+      const routeNum = (vehicle.routeNumber || '').toLowerCase();
       const baseRouteNum = routeNum.replace(/[a-z]$/i, '');
-      const routeId = vehicle.routeId?.toLowerCase() || '';
-      const label = vehicle.label?.toLowerCase() || '';
+      const routeId = (vehicle.routeId || '').toLowerCase();
+      const label = (vehicle.label || '').toLowerCase();
 
-      return (
+      const isNumericQuery = /^[0-9]+$/.test(query);
+
+      if (isNumericQuery) {
+        // match exact base number or number with a single trailing letter
+        const re = new RegExp(`^${query}[a-z]?$`, 'i');
+        if (re.test(routeNum) || baseRouteNum === query) return true;
+      }
+
+      // General partial matching for non-numeric queries
+      if (
         routeNum.includes(query) ||
         baseRouteNum.includes(query) ||
         vehicle.routeName.toLowerCase().includes(query) ||
         routeId.includes(query) ||
         vehicle.id.toLowerCase().includes(query) ||
         label.includes(query)
-      );
+      ) {
+        return true;
+      }
+
+      return false;
     }) || [];
 
     if (showFavoritesOnly) {
