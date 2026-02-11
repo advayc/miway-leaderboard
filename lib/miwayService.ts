@@ -16,6 +16,8 @@ let shapeCache: Record<string, [number, number][]> = {};
 let routeToShapeCache: Record<string, string> = {}; // routeId -> shapeId
 let shapeCacheFetchedAt = 0;
 const SHAPE_CACHE_TTL_MS = 1000 * 60 * 60 * 12; // 12 hours
+// Map from uppercased route short name (eg. "5", "101A") to GTFS route_id(s)
+let routeShortNameToRouteIds: Record<string, string[]> = {};
 
 type VehicleSnapshot = {
     lat: number;
@@ -620,6 +622,33 @@ async function loadShapeData(): Promise<void> {
             }
         }
 
+        // Build reverse map from route short name -> route_id(s) so we can
+        // resolve requests that pass the short name instead of GTFS route_id.
+        try {
+            const routeMap = await getRouteMap();
+            routeShortNameToRouteIds = {};
+            for (const [rId, meta] of Object.entries(routeMap)) {
+                const short = (meta.shortName || '').toUpperCase();
+                if (!short) continue;
+                if (!routeShortNameToRouteIds[short]) routeShortNameToRouteIds[short] = [];
+                routeShortNameToRouteIds[short].push(rId);
+            }
+
+            // Also build entries for base numbers without trailing letter (eg. 5N -> 5)
+            const additions: Record<string, string[]> = {};
+            for (const short of Object.keys(routeShortNameToRouteIds)) {
+                const base = short.replace(/[A-Z]$/, '');
+                if (base && base !== short) {
+                    additions[base] = (additions[base] || []).concat(routeShortNameToRouteIds[short]);
+                }
+            }
+            for (const k of Object.keys(additions)) {
+                routeShortNameToRouteIds[k] = (routeShortNameToRouteIds[k] || []).concat(additions[k]);
+            }
+        } catch (e) {
+            // ignore failures to build short-name map
+        }
+
         shapeCacheFetchedAt = now;
     } catch (error) {
         console.warn('Failed to load GTFS shape data:', error);
@@ -635,7 +664,45 @@ export interface RouteShapeResponse {
 export async function getRouteShape(routeId: string): Promise<RouteShapeResponse> {
     await loadShapeData();
 
-    const shapeId = routeToShapeCache[routeId];
+    // Try direct lookup first (routeId is the GTFS route_id)
+    let shapeId = routeToShapeCache[routeId];
+
+    // If not found, the feed may be using the route short name (eg. "5", "101A")
+    // instead of the internal GTFS route_id. Try to resolve the short name to
+    // a route_id using the static routes.txt mapping.
+    if (!shapeId) {
+        try {
+            const key = routeId.toUpperCase();
+            // Direct short-name mapping (eg. "5", "101A")
+            const routeIds = routeShortNameToRouteIds[key];
+            if (routeIds && routeIds.length > 0) {
+                // Prefer the first matching route_id that has a shape mapping
+                for (const rid of routeIds) {
+                    if (routeToShapeCache[rid]) {
+                        shapeId = routeToShapeCache[rid];
+                        break;
+                    }
+                }
+            }
+
+            // If still not found, try stripping a trailing letter and retry
+            if (!shapeId) {
+                const baseKey = key.replace(/[A-Z]$/, '');
+                const baseRouteIds = routeShortNameToRouteIds[baseKey];
+                if (baseRouteIds && baseRouteIds.length > 0) {
+                    for (const rid of baseRouteIds) {
+                        if (routeToShapeCache[rid]) {
+                            shapeId = routeToShapeCache[rid];
+                            break;
+                        }
+                    }
+                }
+            }
+        } catch (e) {
+            // ignore errors and fall through to empty coordinates
+        }
+    }
+
     const coordinates = shapeId ? shapeCache[shapeId] ?? [] : [];
 
     return {
