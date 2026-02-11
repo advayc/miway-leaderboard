@@ -6,6 +6,11 @@ body {
 	color: #1f1f1f;
 }
 
+/* Force light mode */
+html {
+	color-scheme: light;
+}
+
 a {
 	color: #d9481b;
 	text-decoration: none;
