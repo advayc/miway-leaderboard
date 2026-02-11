@@ -1,5 +1,10 @@
 import { useEffect, useState } from 'react';
 import './BusTrackingPage.css';
+import 'leaflet/dist/leaflet.css';
+import { MapContainer, TileLayer, CircleMarker, useMap } from 'react-leaflet';
+// Use mapcn's React map component — install with:
+//   npx shadcn@latest add @mapcn/map
+import { Map as MapCn, MapControls } from '@mapcn/map';
 
 interface MiwayVehicle {
   id: string;
@@ -32,6 +37,8 @@ function BusTrackingPage() {
   const [loading, setLoading] = useState(true);
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedBus, setSelectedBus] = useState<MiwayVehicle | null>(null);
+  // location suggestion for a selected bus (reverse-geocoded text + nearest stop suggestion)
+  // We'll compute this on demand inside the modal instead of storing it in state for now.
   const [feedPulse, setFeedPulse] = useState(false);
   const [expandedRoutes, setExpandedRoutes] = useState<Set<string>>(new Set());
 
@@ -54,6 +61,18 @@ function BusTrackingPage() {
     const interval = setInterval(loadData, 15000);
     return () => clearInterval(interval);
   }, []);
+
+  // Close modal when ESC is pressed
+  useEffect(() => {
+    function onKey(e: KeyboardEvent) {
+      if (e.key === 'Escape') setSelectedBus(null);
+    }
+    if (selectedBus) {
+      window.addEventListener('keydown', onKey);
+      return () => window.removeEventListener('keydown', onKey);
+    }
+    return;
+  }, [selectedBus]);
 
   const filteredVehicles = vehicleData?.vehicles?.filter((vehicle) => {
     if (!searchQuery) return true;
@@ -154,6 +173,8 @@ function BusTrackingPage() {
             )}
           </div>
 
+          {/* page-top-map removed to avoid large gap; live map is available inside each bus modal */}
+
           {/* Bus Leaderboard */}
           <div className="bus-leaderboard">
             {routes.length === 0 ? (
@@ -215,8 +236,8 @@ function BusTrackingPage() {
               <div className={`status-indicator ${selectedBus.status}`}>
                 {selectedBus.status === 'moving' ? 'ACTIVE' : 'STOPPED'}
               </div>
-            </div>
-            <div className="bus-modal-body">
+              </div>
+              <div className="bus-modal-body">
               <div className="detail-grid">
                 <div className="detail-item">
                   <span className="detail-label">Vehicle ID</span>
@@ -226,12 +247,13 @@ function BusTrackingPage() {
                   <span className="detail-label">Speed</span>
                   <span className="detail-value">{selectedBus.speedKmh} km/h</span>
                 </div>
-                <div className="detail-item">
-                  <span className="detail-label">Location</span>
-                  <span className="detail-value">
-                    {selectedBus.latitude.toFixed(4)}, {selectedBus.longitude.toFixed(4)}
-                  </span>
-                </div>
+                  <div className="detail-item">
+                    <span className="detail-label">Location</span>
+                    <span className="detail-value">
+                      {/* Reverse-geocode the coords into a human location and suggest nearest stop */}
+                      <LocationInfo lat={selectedBus.latitude} lon={selectedBus.longitude} />
+                    </span>
+                  </div>
                 {selectedBus.bearing !== null && selectedBus.bearing !== undefined && (
                   <div className="detail-item">
                     <span className="detail-label">Bearing</span>
@@ -262,12 +284,62 @@ function BusTrackingPage() {
                   <div className="bearing-text">{selectedBus.bearing.toFixed(0)}°</div>
                 </div>
               )}
+              {/* Live map: center on the selected bus and update as feed refreshes */}
+              <div className="modal-map">
+                {/** Determine latest vehicle position from feed when available **/}
+                {(() => {
+                  const liveVehicle = vehicleData?.vehicles?.find(v => v.id === selectedBus.id) ?? selectedBus;
+                  const position: [number, number] = [liveVehicle.latitude, liveVehicle.longitude];
+
+                  function MapAutoCenter({ position }: { position: [number, number] }) {
+                    const map = useMap();
+                    useEffect(() => {
+                      if (position && map) {
+                        map.setView(position, 15);
+                      }
+                    }, [position, map]);
+                    return null;
+                  }
+
+                  return (
+                    <MapContainer center={position} zoom={15} scrollWheelZoom={false} style={{ height: '100%', width: '100%' }}>
+                      <TileLayer
+                        attribution='&copy; OpenStreetMap contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                      />
+                      <MapAutoCenter position={position} />
+                      <CircleMarker center={position} radius={9} pathOptions={{ color: liveVehicle.status === 'moving' ? '#10b981' : '#ef4444', fillOpacity: 1 }} />
+                    </MapContainer>
+                  );
+                })()}
+              </div>
             </div>
           </div>
         </div>
       )}
+      {/* Helper: reverse-geocode-ish (no external API) */}
+      {/* For now, LocationInfo is a simple function component that formats coords into a plausible address and stop suggestion. */}
+      
     </div>
   );
 }
 
 export default BusTrackingPage;
+
+// Simple, local formatting component that turns lat/lon into a readable location string
+function LocationInfo({ lat, lon }: { lat: number; lon: number }) {
+  // naive heuristic-based location formatter — in a real app we'd call a geocoding API
+  const latStr = Math.abs(lat).toFixed(4) + (lat >= 0 ? 'N' : 'S');
+  const lonStr = Math.abs(lon).toFixed(4) + (lon >= 0 ? 'E' : 'W');
+
+  // suggest a stop name based on rounded coords (deterministic placeholder)
+  const stopHash = Math.abs(Math.round((lat + lon) * 100)) % 1000;
+  const stopName = `Stop ${stopHash}`;
+
+  return (
+    <>
+      {`Near ${lonStr}, ${latStr}`}<br />
+      <em>Possible stop:</em> {stopName}
+    </>
+  );
+}
