@@ -11,6 +11,12 @@ let routeMapCache: Record<string, { shortName: string; longName: string }> = {};
 let routeMapFetchedAt = 0;
 const ROUTE_MAP_TTL_MS = 1000 * 60 * 60 * 12;
 
+// Shape cache: routeId -> coordinates array
+let shapeCache: Record<string, [number, number][]> = {};
+let routeToShapeCache: Record<string, string> = {}; // routeId -> shapeId
+let shapeCacheFetchedAt = 0;
+const SHAPE_CACHE_TTL_MS = 1000 * 60 * 60 * 12; // 12 hours
+
 type VehicleSnapshot = {
     lat: number;
     lon: number;
@@ -546,4 +552,107 @@ export async function getAlertsSummary(): Promise<FeedSummary> {
         updatedAt: headerTimestamp ? new Date(headerTimestamp * 1000).toISOString() : undefined,
         sample,
     };
+}
+
+// Load shape data from GTFS static feed
+async function loadShapeData(): Promise<void> {
+    const now = Date.now();
+    if (Object.keys(shapeCache).length > 0 && now - shapeCacheFetchedAt < SHAPE_CACHE_TTL_MS) {
+        return;
+    }
+
+    try {
+        const response = await fetch(GTFS_STATIC_URL);
+        if (!response.ok) {
+            throw new Error(`Failed to fetch GTFS static data: ${response.status}`);
+        }
+
+        const buffer = Buffer.from(await response.arrayBuffer());
+        const zip = new AdmZip(buffer);
+
+        // Parse shapes.txt
+        const shapesEntry = zip.getEntry('shapes.txt');
+        if (shapesEntry) {
+            const shapesCsv = shapesEntry.getData().toString('utf-8');
+            const shapeRecords: Array<Record<string, string>> = parse(shapesCsv, {
+                columns: true,
+                skip_empty_lines: true,
+            });
+
+            const shapesMap: Record<string, { seq: number; lat: number; lon: number }[]> = {};
+            for (const record of shapeRecords) {
+                const shapeId = record.shape_id?.trim();
+                const lat = parseFloat(record.shape_pt_lat);
+                const lon = parseFloat(record.shape_pt_lon);
+                const seq = parseInt(record.shape_pt_sequence, 10);
+
+                if (!shapeId || isNaN(lat) || isNaN(lon) || isNaN(seq)) continue;
+
+                if (!shapesMap[shapeId]) {
+                    shapesMap[shapeId] = [];
+                }
+                shapesMap[shapeId].push({ seq, lat, lon });
+            }
+
+            // Sort by sequence and convert to coordinate arrays
+            for (const [shapeId, points] of Object.entries(shapesMap)) {
+                points.sort((a, b) => a.seq - b.seq);
+                shapeCache[shapeId] = points.map(p => [p.lon, p.lat]);
+            }
+        }
+
+        // Parse trips.txt to map routeId -> shapeId
+        const tripsEntry = zip.getEntry('trips.txt');
+        if (tripsEntry) {
+            const tripsCsv = tripsEntry.getData().toString('utf-8');
+            const tripRecords: Array<Record<string, string>> = parse(tripsCsv, {
+                columns: true,
+                skip_empty_lines: true,
+            });
+
+            for (const record of tripRecords) {
+                const routeId = record.route_id?.trim();
+                const shapeId = record.shape_id?.trim();
+
+                if (routeId && shapeId && !routeToShapeCache[routeId]) {
+                    routeToShapeCache[routeId] = shapeId;
+                }
+            }
+        }
+
+        shapeCacheFetchedAt = now;
+    } catch (error) {
+        console.warn('Failed to load GTFS shape data:', error);
+    }
+}
+
+export interface RouteShapeResponse {
+    routeId: string;
+    shapeId?: string;
+    coordinates: [number, number][];
+}
+
+export async function getRouteShape(routeId: string): Promise<RouteShapeResponse> {
+    await loadShapeData();
+
+    const shapeId = routeToShapeCache[routeId];
+    const coordinates = shapeId ? shapeCache[shapeId] ?? [] : [];
+
+    return {
+        routeId,
+        shapeId,
+        coordinates,
+    };
+}
+
+export async function getRouteShapes(): Promise<Record<string, [number, number][]>> {
+    await loadShapeData();
+    
+    const result: Record<string, [number, number][]> = {};
+    for (const [routeId, shapeId] of Object.entries(routeToShapeCache)) {
+        if (shapeCache[shapeId]) {
+            result[routeId] = shapeCache[shapeId];
+        }
+    }
+    return result;
 }

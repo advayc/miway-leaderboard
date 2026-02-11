@@ -1,11 +1,19 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { getMiwayLeaderboard, getTripUpdatesSummary, getAlertsSummary, getVehiclePositions } from './lib/miwayService'
+import tailwindcss from '@tailwindcss/vite'
+import path from 'path'
+import { getMiwayLeaderboard, getTripUpdatesSummary, getAlertsSummary, getVehiclePositions, getRouteShape } from './lib/miwayService'
 
 // https://vite.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   plugins: [
     react(),
+    tailwindcss(),
     {
       name: 'miway-api',
       configureServer(server) {
@@ -54,6 +62,26 @@ export default defineConfig({
             res.statusCode = 500;
             res.setHeader('Content-Type', 'application/json');
             res.end(JSON.stringify({ error: 'Failed to fetch MiWay vehicle positions' }));
+          }
+        });
+
+        server.middlewares.use('/api/miway-route-shape', async (req, res) => {
+          try {
+            const url = new URL(req.url || '', 'http://localhost');
+            const routeId = url.searchParams.get('routeId');
+            if (!routeId) {
+              res.statusCode = 400;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(JSON.stringify({ error: 'Missing routeId parameter' }));
+              return;
+            }
+            const shape = await getRouteShape(routeId);
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify(shape));
+          } catch (error) {
+            res.statusCode = 500;
+            res.setHeader('Content-Type', 'application/json');
+            res.end(JSON.stringify({ error: 'Failed to fetch route shape' }));
           }
         });
 
