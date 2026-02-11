@@ -278,12 +278,22 @@ function BusTrackingPage() {
   const filteredVehicles = useMemo(() => {
     const base = vehicleData?.vehicles?.filter((vehicle) => {
       if (!searchQuery) return true;
-      const query = searchQuery.toLowerCase();
+      const query = searchQuery.toLowerCase().trim();
+
+      // routeNumber may include a trailing direction letter (eg. "26N").
+      // Also match against the base route number (eg. "26").
+      const routeNum = vehicle.routeNumber?.toLowerCase() || '';
+      const baseRouteNum = routeNum.replace(/[a-z]$/i, '');
+      const routeId = vehicle.routeId?.toLowerCase() || '';
+      const label = vehicle.label?.toLowerCase() || '';
+
       return (
-        vehicle.routeNumber.toLowerCase().includes(query) ||
+        routeNum.includes(query) ||
+        baseRouteNum.includes(query) ||
         vehicle.routeName.toLowerCase().includes(query) ||
+        routeId.includes(query) ||
         vehicle.id.toLowerCase().includes(query) ||
-        vehicle.label?.toLowerCase().includes(query)
+        label.includes(query)
       );
     }) || [];
 
