@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo, useState } from 'react';
 import { Map, MapMarker, MarkerContent, MarkerTooltip, MapRoute, MapControls } from '@/components/ui/map';
 
 interface Vehicle {
@@ -73,13 +73,37 @@ const ModalMap = memo(function ModalMap({ vehicle, routeShape }: ModalMapProps) 
   const stops = routeShape?.stops || 
     (routeShape?.coordinates ? generateStopsFromCoordinates(routeShape.coordinates, vehicle.routeName) : []);
 
+  // Track user location when they click the locate button
+  const [userLocation, setUserLocation] = useState<{ longitude: number; latitude: number } | null>(null);
+
   return (
     <Map 
       center={[vehicle.longitude, vehicle.latitude]} 
       zoom={13}
       className="h-full w-full"
     >
-      <MapControls position="bottom-right" showZoom showLocate showCompass />
+      <MapControls position="bottom-right" showZoom showLocate showCompass onLocate={setUserLocation} />
+      
+      {/* User location marker */}
+      {userLocation && (
+        <MapMarker
+          longitude={userLocation.longitude}
+          latitude={userLocation.latitude}
+        >
+          <MarkerContent>
+            <div className="user-location-marker">
+              <div className="user-location-dot" />
+              <div className="user-location-ring" />
+            </div>
+          </MarkerContent>
+          <MarkerTooltip>
+            <div className="user-location-tooltip">
+              <strong>Your Location</strong>
+            </div>
+          </MarkerTooltip>
+        </MapMarker>
+      )}
+      
       {/* Route path */}
       {routeShape && routeShape.coordinates.length > 0 && (
         <MapRoute

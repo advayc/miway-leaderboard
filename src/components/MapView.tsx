@@ -184,6 +184,9 @@ function isCluster(item: unknown): item is { clusterId: string; count: number; l
 const MapView = memo(function MapView({ vehicles, center, onSelectBus }: MapViewProps) {
   // Use a fixed zoom for clustering calculation - will be adjusted when user zooms
   const clusteredItems = useMemo(() => clusterVehicles(vehicles, 11), [vehicles]);
+  
+  // Track user location when they click the locate button
+  const [userLocation, setUserLocation] = useState<{ longitude: number; latitude: number } | null>(null);
 
   return (
     <Map 
@@ -193,8 +196,27 @@ const MapView = memo(function MapView({ vehicles, center, onSelectBus }: MapView
       // expose rotate toggle in controls
       >
       {/* Add controls with rotate toggle enabled */}
-      <MapControls position="bottom-right" showZoom showLocate showRotateToggle />
+      <MapControls position="bottom-right" showZoom showLocate showRotateToggle onLocate={setUserLocation} />
       
+      {/* User location marker */}
+      {userLocation && (
+        <MapMarker
+          longitude={userLocation.longitude}
+          latitude={userLocation.latitude}
+        >
+          <MarkerContent>
+            <div className="user-location-marker">
+              <div className="user-location-dot" />
+              <div className="user-location-ring" />
+            </div>
+          </MarkerContent>
+          <MarkerTooltip>
+            <div className="user-location-tooltip">
+              <strong>Your Location</strong>
+            </div>
+          </MarkerTooltip>
+        </MapMarker>
+      )}
       
       {/* Default landmarks - City Centre and GO terminals */}
       {DEFAULT_LANDMARKS.map((landmark) => (

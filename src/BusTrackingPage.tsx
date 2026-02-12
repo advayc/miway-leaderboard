@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef, useCallback, memo, lazy, Suspense, useMemo } from 'react';
 import './BusTrackingPage.css';
 import { getRouteInfo, getRouteTypeLabel } from '@/data/miwayRoutes';
+import routeShapesData from '@/data/route-shapes.json';
 
 // Lazy load heavy map components for bundle optimization
 const MapView = lazy(() => import('./components/MapView'));
@@ -257,12 +258,35 @@ function BusTrackingPage() {
       return;
     }
     
-    const fetchShape = async () => {
+    const loadShape = () => {
       setLoadingShape(true);
       try {
-        const response = await fetch(`/api/miway-route-shape?routeId=${selectedBus.routeId}`);
-        const data = await response.json();
-        setRouteShape(data);
+        // Try to find route by routeId first
+        let routeData = routeShapesData.routes.find(r => r.routeId === selectedBus.routeId);
+        
+        // If not found, try by route number (short name)
+        if (!routeData) {
+          const routeNum = selectedBus.routeNumber.toUpperCase();
+          const indexData = routeShapesData.index as any;
+          routeData = indexData[routeNum];
+          
+          // If still not found, try base number without trailing letter
+          if (!routeData) {
+            const baseNum = routeNum.replace(/[A-Z]$/, '');
+            routeData = indexData[baseNum];
+          }
+        }
+        
+        if (routeData) {
+          setRouteShape({
+            routeId: routeData.routeId,
+            shapeId: routeData.shapeId,
+            coordinates: routeData.coordinates as [number, number][],
+          });
+        } else {
+          console.warn(`No route shape found for route ${selectedBus.routeId} / ${selectedBus.routeNumber}`);
+          setRouteShape(null);
+        }
       } catch (error) {
         console.error('Failed to load route shape:', error);
         setRouteShape(null);
@@ -271,7 +295,7 @@ function BusTrackingPage() {
       }
     };
     
-    fetchShape();
+    loadShape();
   }, [selectedBus?.routeId]);
 
   // Filter vehicles by search query only
