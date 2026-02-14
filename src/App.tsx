@@ -46,6 +46,14 @@ function App() {
     }
   };
 
+  const resetLeaderboard = () => {
+    setLeaderboardData([]);
+    leaderboardDataRef.current = [];
+    leaderboardQueue.current = new LeaderboardQueue();
+    itemRefs.current.clear();
+    prevPositionsRef.current = null;
+  };
+
   useEffect(() => {
     fetchLeaderboard();
 
@@ -165,6 +173,9 @@ function App() {
         MiWay publishes real-time vehicle updates across Mississauga.
         <br></br>
         This site ranks average route speeds using the live GTFS-RT feed.
+      </div>
+      <div className="reset-container">
+        <button onClick={resetLeaderboard} className="reset-button">Reset</button>
       </div>
         <div className="leaderboard">
           {leaderboardData.length == 0 ? (
