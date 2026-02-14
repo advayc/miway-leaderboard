@@ -317,7 +317,7 @@ function BusTrackingPage() {
       if (isNumericQuery) {
         // match exact base number or number with a single trailing letter
         const re = new RegExp(`^${query}[a-z]?$`, 'i');
-        if (re.test(routeNum) || baseRouteNum === query) return true;
+        return re.test(routeNum) || baseRouteNum === query;
       }
 
       // General partial matching for non-numeric queries
