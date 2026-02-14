@@ -174,6 +174,9 @@ function App() {
         <br></br>
         This site ranks average route speeds using the live GTFS-RT feed.
       </div>
+      <div className="reset-container">
+        <button onClick={resetLeaderboard} className="reset-button">Reset</button>
+      </div>
         <div className="leaderboard">
           {leaderboardData.length == 0 ? (
             <div className="loading">
@@ -207,9 +210,6 @@ function App() {
         </div>
       <div className="info">
         This leaderboard is live and shows the average speed<br></br>of all MiWay vehicles on a route with a short delay.
-      </div>
-      <div className="reset-container">
-        <button onClick={resetLeaderboard} className="reset-button">Reset</button>
       </div>
       <div className="footer">
         <i>
