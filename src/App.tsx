@@ -46,6 +46,14 @@ function App() {
     }
   };
 
+  const resetLeaderboard = () => {
+    setLeaderboardData([]);
+    leaderboardDataRef.current = [];
+    leaderboardQueue.current = new LeaderboardQueue();
+    itemRefs.current.clear();
+    prevPositionsRef.current = null;
+  };
+
   useEffect(() => {
     fetchLeaderboard();
 
@@ -199,6 +207,9 @@ function App() {
         </div>
       <div className="info">
         This leaderboard is live and shows the average speed<br></br>of all MiWay vehicles on a route with a short delay.
+      </div>
+      <div className="reset-container">
+        <button onClick={resetLeaderboard} className="reset-button">Reset</button>
       </div>
       <div className="footer">
         <i>

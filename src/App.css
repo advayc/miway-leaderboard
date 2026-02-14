@@ -409,3 +409,28 @@
     transform: translateY(0);
   }
 }
+
+/* Reset Button Container */
+.reset-container {
+  text-align: center;
+  margin: 0.75rem 0;
+}
+
+/* Reset Button - styled like hyperlink */
+.reset-button {
+  background: none;
+  border: none;
+  color: #d9481b;
+  text-decoration: none;
+  font-family: 'Monospace', monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.reset-button:hover {
+  color: #f05a28;
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+}
