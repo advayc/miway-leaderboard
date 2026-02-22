@@ -494,6 +494,46 @@
   border-color: #f05a28;
 }
 
+.near-me-toggle {
+  padding: 0.65rem 0.8rem;
+  font-family: monospace;
+  font-size: 0.9rem;
+  font-weight: 700;
+  border: 2px solid #1f1f1f;
+  background: #fff;
+  color: #1f1f1f;
+  cursor: pointer;
+  transition: all 150ms ease;
+  white-space: nowrap;
+}
+
+.near-me-toggle:hover {
+  background: #e8f4e8;
+}
+
+.near-me-toggle.active {
+  background: #22a822;
+  color: #fff;
+  border-color: #22a822;
+}
+
+.near-me-toggle.locating {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.distance-badge {
+  font-family: monospace;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #e8f4e8;
+  color: #22a822;
+  border: 1.5px solid #22a822;
+  padding: 0.1rem 0.35rem;
+  border-radius: 2px;
+  margin-right: 0.35rem;
+}
+
 /* Bus Leaderboard */
 .bus-leaderboard {
   width: min(900px, 95%);

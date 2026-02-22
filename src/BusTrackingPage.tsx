@@ -128,6 +128,15 @@ function saveFavorites(favorites: Set<string>) {
   }
 }
 
+function haversineKm(lat1: number, lon1: number, lat2: number, lon2: number): number {
+  const toRad = (v: number) => (v * Math.PI) / 180;
+  const R = 6371;
+  const dLat = toRad(lat2 - lat1);
+  const dLon = toRad(lon2 - lon1);
+  const a = Math.sin(dLat / 2) ** 2 + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon / 2) ** 2;
+  return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+}
+
 function BusTrackingPage() {
   const PULSE_ANIMATION_DURATION = 700;
   const REFRESH_INTERVAL_MS = 3000;
@@ -142,6 +151,9 @@ function BusTrackingPage() {
   const [secondsAgo, setSecondsAgo] = useState(0);
   const [favorites, setFavorites] = useState<Set<string>>(loadFavorites);
   const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+  const [nearMeActive, setNearMeActive] = useState(false);
+  const [userLocation, setUserLocation] = useState<{ lat: number; lon: number } | null>(null);
+  const [isLocating, setIsLocating] = useState(false);
   const lastFetchTime = useRef<number>(Date.now());
   
   // Route shape for modal
@@ -150,6 +162,30 @@ function BusTrackingPage() {
 
   // Mississauga center coordinates
   const MISSISSAUGA_CENTER: [number, number] = [-79.6441, 43.5890];
+
+  const toggleNearMe = useCallback(() => {
+    if (nearMeActive) {
+      setNearMeActive(false);
+      return;
+    }
+    if (userLocation) {
+      setNearMeActive(true);
+      return;
+    }
+    setIsLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (pos) => {
+        setUserLocation({ lat: pos.coords.latitude, lon: pos.coords.longitude });
+        setNearMeActive(true);
+        setIsLocating(false);
+      },
+      () => {
+        setIsLocating(false);
+        alert('Unable to get your location. Please allow location access.');
+      },
+      { enableHighAccuracy: true, timeout: 10000 }
+    );
+  }, [nearMeActive, userLocation]);
 
   const toggleFavorite = useCallback((vehicleId: string) => {
     setFavorites(prev => {
@@ -298,9 +334,15 @@ function BusTrackingPage() {
     loadShape();
   }, [selectedBus?.routeId]);
 
-  // Filter vehicles by search query only
+  // Filter vehicles by search query, favorites, and near-me
   const filteredVehicles = useMemo(() => {
     const base = vehicleData?.vehicles?.filter((vehicle) => {
+      // near me filter (2 km radius)
+      if (nearMeActive && userLocation) {
+        const dist = haversineKm(userLocation.lat, userLocation.lon, vehicle.latitude, vehicle.longitude);
+        if (dist > 2) return false;
+      }
+
       if (!searchQuery) return true;
       const query = searchQuery.toLowerCase().trim();
 
@@ -308,7 +350,7 @@ function BusTrackingPage() {
       // When the query is numeric-only, require an exact base-number match
       // (so `26` matches `26` and `26N` but `2` won't match `26`).
       const routeNum = (vehicle.routeNumber || '').toLowerCase();
-      const baseRouteNum = routeNum.replace(/[a-z]$/i, '');
+      const baseRouteNum = routeNum.replace(/[a-z]+$/i, '');
       const routeId = (vehicle.routeId || '').toLowerCase();
       const label = (vehicle.label || '').toLowerCase();
 
@@ -318,28 +360,27 @@ function BusTrackingPage() {
         // match exact base number or number with a single trailing letter
         const re = new RegExp(`^${query}[a-z]?$`, 'i');
         if (re.test(routeNum) || baseRouteNum === query) return true;
+        // also match vehicle label/id prefix
+        if (label.startsWith(query) || vehicle.id.toLowerCase().startsWith(query)) return true;
+        return false;
       }
 
       // General partial matching for non-numeric queries
-      if (
+      return (
         routeNum.includes(query) ||
         baseRouteNum.includes(query) ||
         vehicle.routeName.toLowerCase().includes(query) ||
         routeId.includes(query) ||
         vehicle.id.toLowerCase().includes(query) ||
         label.includes(query)
-      ) {
-        return true;
-      }
-
-      return false;
+      );
     }) || [];
 
     if (showFavoritesOnly) {
       return base.filter((v) => favorites.has(v.id));
     }
     return base;
-  }, [vehicleData?.vehicles, searchQuery, showFavoritesOnly, favorites]);
+  }, [vehicleData?.vehicles, searchQuery, showFavoritesOnly, favorites, nearMeActive, userLocation]);
 
   // Separate favorites and regular vehicles
   const { favoriteVehicles, regularVehicles } = useMemo(() => {
@@ -403,41 +444,60 @@ function BusTrackingPage() {
 
   const isFavorite = selectedBus ? favorites.has(selectedBus.id) : false;
 
-  const renderRouteGroup = (route: { routeNumber: string; routeName: string; vehicles: MiwayVehicle[] }, isFav: boolean) => (
-    <div key={route.routeNumber} className="route-group">
-      <div 
-        className="route-header"
-        onClick={() => toggleRoute(route.routeNumber)}
-      >
-        <span className="route-number">{route.routeNumber}</span>
-        <span className="route-name">{route.routeName}</span>
-        <span className="vehicle-count">{route.vehicles.length} bus{route.vehicles.length !== 1 ? 'es' : ''}</span>
-        <span className="expand-indicator">{expandedRoutes.has(route.routeNumber) ? '-' : '+'}</span>
-      </div>
-      {expandedRoutes.has(route.routeNumber) && (
-        <div className="vehicle-list">
-          {route.vehicles.map((vehicle) => (
-            <div
-              key={vehicle.id}
-              className={`vehicle-item ${vehicle.status} ${isFav ? 'favorite' : ''}`}
-              onClick={() => setSelectedBus(vehicle)}
-            >
-              <div className="vehicle-id">
-                {favorites.has(vehicle.id) && <span className="favorite-star">★</span>}
-                {vehicle.label || vehicle.id}
-              </div>
-              <div className="vehicle-info">
-                <span className="vehicle-speed">{vehicle.speedKmh} km/h</span>
-                <span className={`status-badge ${vehicle.status}`}>
-                  {vehicle.status === 'moving' ? 'ACTIVE' : 'STOPPED'}
-                </span>
-              </div>
-            </div>
-          ))}
+  const renderRouteGroup = (route: { routeNumber: string; routeName: string; vehicles: MiwayVehicle[] }, isFav: boolean) => {
+    const isExpanded = expandedRoutes.has(route.routeNumber) || searchQuery !== '' || nearMeActive;
+    // When near me is active, sort vehicles by distance
+    const displayVehicles = nearMeActive && userLocation
+      ? [...route.vehicles].sort((a, b) => {
+          const da = haversineKm(userLocation.lat, userLocation.lon, a.latitude, a.longitude);
+          const db = haversineKm(userLocation.lat, userLocation.lon, b.latitude, b.longitude);
+          return da - db;
+        })
+      : route.vehicles;
+    return (
+      <div key={route.routeNumber} className="route-group">
+        <div
+          className="route-header"
+          onClick={() => toggleRoute(route.routeNumber)}
+        >
+          <span className="route-number">{route.routeNumber}</span>
+          <span className="route-name">{route.routeName}</span>
+          <span className="vehicle-count">{route.vehicles.length} bus{route.vehicles.length !== 1 ? 'es' : ''}</span>
+          <span className="expand-indicator">{isExpanded ? '-' : '+'}</span>
         </div>
-      )}
-    </div>
-  );
+        {isExpanded && (
+          <div className="vehicle-list">
+            {displayVehicles.map((vehicle) => {
+              const distKm = nearMeActive && userLocation
+                ? haversineKm(userLocation.lat, userLocation.lon, vehicle.latitude, vehicle.longitude)
+                : null;
+              return (
+                <div
+                  key={vehicle.id}
+                  className={`vehicle-item ${vehicle.status} ${isFav ? 'favorite' : ''}`}
+                  onClick={() => setSelectedBus(vehicle)}
+                >
+                  <div className="vehicle-id">
+                    {favorites.has(vehicle.id) && <span className="favorite-star">★</span>}
+                    {vehicle.label || vehicle.id}
+                  </div>
+                  <div className="vehicle-info">
+                    {distKm !== null && (
+                      <span className="distance-badge">{distKm < 1 ? `${Math.round(distKm * 1000)}m` : `${distKm.toFixed(1)}km`}</span>
+                    )}
+                    <span className="vehicle-speed">{vehicle.speedKmh} km/h</span>
+                    <span className={`status-badge ${vehicle.status}`}>
+                      {vehicle.status === 'moving' ? 'ACTIVE' : 'STOPPED'}
+                    </span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    );
+  };
 
   return (
     <div className="wrapper">
@@ -525,7 +585,7 @@ function BusTrackingPage() {
               onChange={(e) => setSearchQuery(e.target.value)}
             />
             {searchQuery && (
-              <button className="search-clear" onClick={() => setSearchQuery('')}>x</button>
+              <button className="search-clear" onClick={() => setSearchQuery('')}>✕</button>
             )}
             <button
               className={`favorites-toggle ${showFavoritesOnly ? 'active' : ''}`}
@@ -533,6 +593,14 @@ function BusTrackingPage() {
               title={showFavoritesOnly ? 'Show all buses' : 'Show only favorited buses'}
             >
               ★ Fav
+            </button>
+            <button
+              className={`near-me-toggle ${nearMeActive ? 'active' : ''} ${isLocating ? 'locating' : ''}`}
+              onClick={toggleNearMe}
+              title={nearMeActive ? 'Show all buses' : 'Show buses within 2 km of you'}
+              disabled={isLocating}
+            >
+              {isLocating ? '...' : '📍 Near Me'}
             </button>
           </div>
 
