@@ -207,7 +207,7 @@ function App() {
           
           View on <a href="https://github.com/advayc/miway-leaderboard" target="_blank" rel="noreferrer">GitHub</a>.
           <br />
-          Credit to the original project: <a href="https://github.com/lukajvnic/ttc-leaderboard" target="_blank" rel="noreferrer">TTC Leaderboard</a>.
+          Credit to the original project: <a href="https://github.com/lukajvnic/ttc-leaderboard" target="_blank" rel="noreferrer">TTC Leaderboard</a>, modified for MiWay.
         </i>
       </div>
     </div>

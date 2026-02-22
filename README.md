@@ -1,5 +1,7 @@
 # MiWay Live Leaderboard
 
+<img src="./public/banner.svg" alt="MiWay Leaderboard Banner" style="border-radius: 16px; width: 100%; max-width: 800px; margin-bottom: 20px;" />
+
 This website shows live average route speeds for MiWay vehicles in Mississauga using GTFS-RT data.
 
 ## 🛠️ Tech Stack
@@ -69,4 +71,4 @@ miway-leaderboard/
 
 **advayc** — [advay.ca](https://advay.ca/)
 
-This project is a fork of the original TTC leaderboard by [lukajvnic](https://github.com/lukajvnic/ttc-leaderboard).
+This project is a fork of the original TTC leaderboard by [lukajvnic](https://github.com/lukajvnic/ttc-leaderboard), adapted for MiWay buses.

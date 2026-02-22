@@ -1,0 +1,22 @@
+{
+  "name": "MiWay Leaderboard",
+  "short_name": "MiWay",
+  "description": "Real-time tracking and leaderboard for MiWay buses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E85A1F",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
