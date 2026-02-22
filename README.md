@@ -1,6 +1,6 @@
 # MiWay Live Leaderboard
 
-<img src="./public/banner.svg" alt="MiWay Leaderboard Banner" style="border-radius: 16px; width: 100%; max-width: 800px; margin-bottom: 20px;" />
+<img src="./public/banner2.svg" alt="MiWay Leaderboard Banner" style="border-radius: 16px; width: 100%; max-width: 800px; margin-bottom: 20px;" />
 
 This website shows live average route speeds for MiWay vehicles in Mississauga using GTFS-RT data.
 
