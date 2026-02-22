@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="800">
+
+  <rect width="1200" height="630" rx="50" fill="#FAFAFA"/>
+
+  <!-- Bus Logo -->
+  <g transform="translate(150,165) scale(0.5859)">
+    <rect width="512" height="512" rx="112" fill="#E85A1F"/>
+    <path d="M144 176 C144 112, 368 112, 368 176 L368 352 C368 384, 344 400, 320 400 L320 432 C320 450, 296 450, 296 432 L296 400 L216 400 L216 432 C216 450, 192 450, 192 432 L192 400 C168 400, 144 384, 144 352 Z" fill="#FFFFFF"/>
+    <rect x="176" y="176" width="160" height="80" rx="16" fill="#E85A1F"/>
+    <circle cx="208" cy="336" r="24" fill="#E85A1F"/>
+    <circle cx="304" cy="336" r="24" fill="#E85A1F"/>
+  </g>
+
+  <!-- Text -->
+  <text x="520" y="280" font-family="Arial, sans-serif" font-size="96" font-weight="bold" fill="#000000">
+    MiWay
+  </text>
+
+  <text x="520" y="380" font-family="Arial, sans-serif" font-size="96" font-weight="bold" fill="#000000">
+    Leaderboard
+  </text>
+
+  <text x="530" y="460" font-family="Arial, sans-serif" font-size="40" fill="#666666">
+    Real-time transit tracking
+  </text>
+
+</svg>
