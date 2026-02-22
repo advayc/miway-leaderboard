@@ -1,1 +1,22 @@
-{\n  "name": "MiWay Leaderboard",\n  "short_name": "MiWay",\n  "description": "Real-time tracking and leaderboard for MiWay buses.",\n  "start_url": "/",\n  "display": "standalone",\n  "background_color": "#ffffff",\n  "theme_color": "#E85A1F",\n  "icons": [\n    {\n      "src": "/logo.svg",\n      "sizes": "any",\n      "type": "image/svg+xml"\n    },\n    {\n      "src": "/logo2.svg",\n      "sizes": "512x512",\n      "type": "image/svg+xml",\n      "purpose": "maskable"\n    }\n  ]\n}
+{
+  "name": "MiWay Leaderboard",
+  "short_name": "MiWay",
+  "description": "Real-time tracking and leaderboard for MiWay buses.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#E85A1F",
+  "icons": [
+    {
+      "src": "/logo2.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    },
+    {
+      "src": "/logo2.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ]
+}
