@@ -15,6 +15,37 @@ function App() {
   const itemRefs = useRef(new Map<string, HTMLDivElement>());
   const prevPositionsRef = useRef<Map<string, DOMRect> | null>(null);
 
+  useEffect(() => {
+    const entries = [
+      { name: 'description', content: 'Real-time tracking and leaderboard for MiWay buses.' },
+      { property: 'og:title', content: 'MiWay Leaderboard' },
+      { property: 'og:description', content: 'Real-time tracking and leaderboard for MiWay buses.' },
+      { property: 'og:image', content: '/banner.png' },
+      { property: 'twitter:card', content: 'summary_large_image' },
+      { property: 'twitter:title', content: 'MiWay Leaderboard' },
+      { property: 'twitter:description', content: 'Real-time tracking and leaderboard for MiWay buses.' },
+      { property: 'twitter:image', content: '/banner.png' }
+    ];
+
+    const head = document.head;
+    entries.forEach((entry) => {
+      const selector = entry.name
+        ? `meta[name="${entry.name}"]`
+        : `meta[property="${entry.property}"]`;
+      let tag = head.querySelector(selector) as HTMLMetaElement | null;
+      if (!tag) {
+        tag = document.createElement('meta');
+        if (entry.name) {
+          tag.setAttribute('name', entry.name);
+        } else if (entry.property) {
+          tag.setAttribute('property', entry.property);
+        }
+        head.appendChild(tag);
+      }
+      tag.setAttribute('content', entry.content);
+    });
+  }, []);
+
   const fetchLeaderboard = async () => {
     try {
       const response = await fetch('/api/miway');
